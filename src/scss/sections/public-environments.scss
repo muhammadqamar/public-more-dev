@@ -1,0 +1,54 @@
+.public_environments_section {
+  width: 100%;
+  height: auto;
+  margin: 0 auto 120px;
+
+  .rnvironments_heading {
+    max-width: 1097px;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 56px;
+    text-align: center;
+    letter-spacing: -0.04em;
+    color: #000000;
+    margin: 0 auto 105px;
+
+    & > span {
+      font-weight: 600;
+    }
+  }
+
+  .public_environments_banner {
+    max-width: 1364px;
+    height: 500px;
+    position: relative;
+    margin-bottom: 44px;
+
+    &.__trade_banner {
+      margin-left: auto;
+    }
+    &.__refurbished_banner {
+      margin-right: auto;
+    }
+
+    .env_banner_img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .env_btn {
+      position: absolute;
+      right: 44px;
+      bottom: 36px;
+
+      &.__refurbished_btn {
+        left: 83px;
+        bottom: 107px;
+      }
+    }
+  }
+}

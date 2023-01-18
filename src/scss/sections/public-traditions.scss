@@ -1,0 +1,311 @@
+.payent_section {
+  margin-top: 108px;
+}
+
+.suppert_section {
+  margin-top: 99px;
+}
+
+.public_traditions_section {
+  width: 100%;
+  margin-bottom: 80px;
+
+  .public_more_heading {
+    max-width: 1159px;
+    margin: 0 auto clamp(26px, 7vw, 81px);
+
+    .public_label {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      padding: 10px 20px 18px;
+      gap: 10px;
+      width: max-content;
+      height: auto;
+      border-radius: 20px;
+      margin: 0 0 clamp(12px, 5vw, 21px);
+
+      @media (max-width: 768px) {
+        padding: 5px 14px 10px;
+      }
+
+      &.purpal_label {
+        color: #5f26d9;
+        background: rgba(95, 38, 217, 0.1);
+      }
+
+      &.red_label {
+        color: rgba(204, 51, 51, 1);
+        background: rgba(204, 51, 51, 0.1);
+      }
+
+      &.green_label {
+        color: rgba(0, 141, 114, 1);
+        background: rgba(0, 141, 114, 0.1);
+      }
+
+      .label {
+        font-weight: 800;
+        font-size: clamp(20px, 4vw, 32px);
+        line-height: 30px;
+        letter-spacing: 0.02em;
+        margin: 0;
+      }
+    }
+    .label_heading {
+      font-weight: 400;
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: clamp(44px, 5vw, 64px);
+      letter-spacing: -0.01em;
+      color: #000000;
+      padding-right: 20px;
+      margin: 0;
+
+      &.sup_label_heading {
+        padding-right: 80px;
+      }
+
+      & > span {
+        font-weight: bold;
+      }
+
+      & > ._more {
+        @media (min-width: 599px) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  // tabs section
+
+  .traditions_tabs_flex_box {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+
+    @media (max-width: 1200px) {
+      display: block;
+    }
+
+    .traditions_tabs_bar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+
+      @media (max-width: 1200px) {
+        width: 100%;
+      }
+
+      @media (max-width: 799px) {
+        gap: 12px;
+      }
+
+      .tab_card {
+        border-radius: 10px;
+        cursor: pointer;
+        @media (max-width: 1200px) {
+          width: 100%;
+        }
+
+        &.__not_active {
+          width: 376px;
+          height: 145px;
+          background: #f3f3f3;
+          padding: 24px 27px;
+
+          @media (max-width: 1200px) {
+            width: 100%;
+          }
+        }
+
+        &.__active {
+          background: #ffffff !important;
+          border: 2px solid rgba(0, 0, 0, 0.14);
+          box-shadow: 0px 6px 20px 0px #0000003b;
+          width: 401px !important;
+          height: 170px !important;
+          padding: 34px 27px;
+
+          @media (max-width: 599px) {
+            padding: 34px 10px;
+          }
+
+          @media (max-width: 1200px) {
+            width: 100% !important;
+            height: auto !important;
+            padding-bottom: 10px !important;
+          }
+        }
+
+        &:hover {
+          background: #ffffff;
+          border: 2px solid rgba(0, 0, 0, 0.14);
+        }
+
+        .tab_card_flex {
+          width: auto;
+          display: flex;
+          align-items: flex-start;
+          gap: 22px;
+
+          @media (max-width: 599px) {
+            padding-left: 13px;
+          }
+        }
+
+        .tab_shap {
+          height: 36px;
+          width: 38px;
+          object-fit: contain;
+        }
+
+        .tab_contant {
+          width: auto;
+
+          .tab_heading {
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 28px;
+            margin: 0 0 13px;
+            color: #000000;
+          }
+          .tab_headin_img {
+            width: auto;
+            height: auto;
+            margin: 0 0 13px;
+
+            &.pay_tab_heading_1 {
+              width: 145px;
+            }
+            &.pay_tab_heading_2 {
+              width: 139px;
+            }
+            &.pay_tab_heading_3 {
+              width: 108px;
+            }
+            &.pay_tab_heading_4 {
+              width: 92px;
+            }
+            &.suppert_tab_img_1 {
+              width: 193px;
+            }
+            &.suppert_tab_img_2 {
+              width: 163px;
+            }
+            &.public_more_tab_img-1 {
+              height: 24px;
+            }
+            &.public_more_tab_img-2 {
+              height: 37px;
+            }
+            &.public_more_tab_img-3 {
+              height: 30px;
+            }
+            &.public_more_tab_img-4 {
+              height: 28px;
+            }
+          }
+
+          .tab_para {
+            font-size: 16px;
+            line-height: 24px;
+            display: flex;
+            align-items: center;
+            letter-spacing: 0.03em;
+            color: #000000;
+            opacity: 0.6;
+            margin: 0;
+
+            &.pay_tab_para_1 {
+              padding-left: 49px;
+            }
+
+            &.sub_tab_para {
+              padding-left: 57px;
+            }
+
+            &.p_more_para {
+              padding-left: 40px;
+            }
+          }
+        }
+      }
+    }
+
+    // tab contant
+
+    .mobile_tab_contant {
+      margin-top: 48px;
+      @media (min-width: 1200px) {
+        display: none !important;
+      }
+    }
+    .public_tab_abouts {
+      width: 100%;
+      @media (max-width: 1200px) {
+        display: none;
+      }
+    }
+    .traditions_tabs_content {
+      max-width: 958.27px;
+      height: 561px;
+      position: relative;
+      flex: 1 1;
+      border-top-left-radius: 278px;
+      border-bottom-left-radius: 278px;
+      overflow: hidden;
+
+      @media (max-width: 992px) {
+        max-width: auto;
+        height: auto;
+        overflow: inherit;
+        position: inherit;
+      }
+
+      @media (max-width: 1200px) {
+        margin-left: auto;
+        margin-right: -10px;
+      }
+
+      .tabs_banner_img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-top-left-radius: 335px;
+        border-bottom-left-radius: 335px;
+
+        @media (max-width: 992px) {
+          position: inherit;
+        }
+      }
+
+      .button_container {
+        position: absolute;
+        right: 37px;
+        bottom: 36px;
+
+        @media (max-width: 599px) {
+          margin-right: 10px;
+        }
+
+        @media (min-width: 599px) and (max-width: 992px) {
+          padding: 0;
+        }
+
+        @media (max-width: 992px) {
+          position: inherit;
+          margin-top: 14px;
+          display: flex;
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+}

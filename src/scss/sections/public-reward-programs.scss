@@ -1,0 +1,74 @@
+.reward_programs_section {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  margin: 83px auto 80px;
+
+  .club_reward_programs {
+    width: 566px;
+    height: 561px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 102px;
+
+    .club_banner_img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+    }
+
+    .club_content {
+      position: relative;
+
+      &.__student_club {
+        margin-left: 51px;
+      }
+      &.__my_club {
+        margin-left: 152px;
+      }
+
+      .club_heading {
+        font-weight: 800;
+        font-size: 62.4709px;
+        line-height: 90%;
+        letter-spacing: -0.01em;
+        color: #ffffff;
+        margin: 0 0 14px;
+      }
+
+      .club_link {
+        width: max-content;
+        height: auto;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+        letter-spacing: 0.01em;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        .c_icon {
+          width: auto;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  .clubs_main_heading {
+    font-weight: 400;
+    font-size: 27.6543px;
+    line-height: 36px;
+    text-align: center;
+    letter-spacing: 0.01em;
+    color: #000000;
+    margin: 0;
+  }
+}

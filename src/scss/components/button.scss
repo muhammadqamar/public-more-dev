@@ -1,0 +1,58 @@
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 25px;
+  gap: 14px;
+  width: max-content;
+  height: auto;
+  border-radius: 105px;
+  position: relative;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 29px;
+  color: #ffffff;
+
+  &.__black {
+    background: #000000;
+  }
+  &.__purple {
+    background: rgba(95, 38, 217, 1);
+  }
+  &.__blue {
+    background: rgba(19, 26, 143, 1);
+  }
+
+  .btn_icon {
+    width: auto;
+    height: auto;
+
+    @media (max-width: 599px) {
+      display: none;
+    }
+
+    &.__block {
+      @media (max-width: 768px) {
+        display: block !important;
+      }
+    }
+  }
+
+  @media (max-width: 599px) {
+    width: 100%;
+    font-size: 16px;
+    line-height: 32px;
+    border-radius: 10px;
+    padding: 2px 12px 6px;
+  }
+}
+
+// hr line
+
+.hr_line {
+  max-width: 1275px;
+  height: 2px;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.1);
+}
