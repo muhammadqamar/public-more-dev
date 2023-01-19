@@ -118,14 +118,16 @@
         border-radius: 10px;
         cursor: pointer;
         width: 376px;
-        height: 145px;
+        min-height: 145px;
+        transition: all 0.2s ease-in-out;
+        outline-color: rgba(0, 0, 0, 0.14) !important;
         @media (max-width: 1200px) {
           width: 100%;
         }
 
         &.__not_active {
           background: #f3f3f3;
-          padding: 24px 27px;
+          padding: 24px 27px 24px 40px;
           @media (max-width: 1200px) {
             width: 100%;
           }
@@ -133,9 +135,9 @@
 
         &.__active {
           background: #ffffff !important;
-          border: 2px solid rgba(0, 0, 0, 0.14);
+          outline: rgba(0, 0, 0, 0.14) solid 2px !important;
           box-shadow: 0px 6px 20px 0px #0000003b;
-          padding: 34px 27px;
+          padding: 24px 27px 24px 40px;
           transform: scale3d(1.1, 1.2, 1.1);
           margin: 16px 0;
 
@@ -149,11 +151,17 @@
             transform: inherit;
             margin: 0;
           }
+
+          .mobile_tab_contant {
+            margin-top: 23px;
+          }
         }
 
         &:hover {
           background: #ffffff;
-          border: 2px solid rgba(0, 0, 0, 0.14);
+          outline: rgba(0, 0, 0, 0.14) solid 2px !important;
+          outline-color: rgba(0, 0, 0, 0.14) !important;
+          animation: none !important;
         }
 
         .tab_card_flex {
@@ -249,7 +257,6 @@
     // tab contant
 
     .mobile_tab_contant {
-      margin-top: 48px;
       @media (min-width: 1200px) {
         display: none !important;
       }
