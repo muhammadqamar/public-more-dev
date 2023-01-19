@@ -13,7 +13,10 @@
     <!-- tab bar -->
     <div class="traditions_tabs_bar">
       <!-- 1 -->
-      <div class="tab_card __not_active" onclick="openPublicMoreTab(event,'more-tab-1')">
+      <div
+        class="tab_card __not_active"
+        onclick="openPublicMoreTab(event,'more-tab-1','more-tab-mob-1')"
+      >
         <div class="tab_contant">
           <img
             src="./images/public-more/p-more-img-1.png"
@@ -22,9 +25,32 @@
           />
           <p class="tab_para p_more_para">Άμεση επίλυση πιθανής βλάβης για 5 χρόνια</p>
         </div>
+
+        <div class="mobile_tab_contant">
+          <div
+            id="more-tab-mob-1"
+            class="traditions_tabs_content moreTabcontentMob"
+            style="display: none"
+          >
+            <img
+              src="./images/public-more/more-and-more.png"
+              alt="banner"
+              class="tabs_banner_img"
+            />
+            <div class="button_container">
+              <a href="" class="button __black">
+                Μάθε περισσότερα
+                <img src="./images/public-more/button-icon.svg" alt="icon" class="btn_icon" />
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
       <!-- 2 -->
-      <div class="tab_card __not_active" onclick="openPublicMoreTab(event,'more-tab-2') ">
+      <div
+        class="tab_card __not_active"
+        onclick="openPublicMoreTab(event,'more-tab-2','more-tab-mob-2') "
+      >
         <div class="tab_contant">
           <img
             src="./images/public-more/p-more-img-2.png"
@@ -33,9 +59,32 @@
           />
           <p class="tab_para p_more_para">Εγκατάσταση και επίδειξη συσκευών στο χώρο σου</p>
         </div>
+
+        <div class="mobile_tab_contant">
+          <div
+            id="more-tab-mob-2"
+            class="traditions_tabs_content moreTabcontentMob"
+            style="display: none"
+          >
+            <img
+              src="./images/public-more/more-and-more.png"
+              alt="banner"
+              class="tabs_banner_img"
+            />
+            <div class="button_container">
+              <a href="" class="button __black">
+                Μάθε περισσότερα
+                <img src="./images/public-more/button-icon.svg" alt="icon" class="btn_icon" />
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
       <!-- 3 -->
-      <div class="tab_card __not_active" onclick="openPublicMoreTab(event,'more-tab-3')">
+      <div
+        class="tab_card __not_active"
+        onclick="openPublicMoreTab(event,'more-tab-3','more-tab-mob-3')"
+      >
         <div class="tab_contant">
           <img
             src="./images/public-more/p-more-img-3.png"
@@ -44,9 +93,31 @@
           />
           <p class="tab_para p_more_para">Γρήγορα Αξιόπιστα και εγγυημένα με iRepair</p>
         </div>
+        <div class="mobile_tab_contant">
+          <div
+            id="more-tab-mob-3"
+            class="traditions_tabs_content moreTabcontentMob"
+            style="display: none"
+          >
+            <img
+              src="./images/public-more/more-and-more.png"
+              alt="banner"
+              class="tabs_banner_img"
+            />
+            <div class="button_container">
+              <a href="" class="button __black">
+                Μάθε περισσότερα
+                <img src="./images/public-more/button-icon.svg" alt="icon" class="btn_icon" />
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
       <!-- 4 -->
-      <div class="tab_card __not_active" onclick="openPublicMoreTab(event,'more-tab-4')">
+      <div
+        class="tab_card __not_active"
+        onclick="openPublicMoreTab(event,'more-tab-4','more-tab-mob-4')"
+      >
         <div class="tab_contant">
           <img
             src="./images/public-more/p-more-img-4.png"
@@ -55,42 +126,63 @@
           />
           <p class="tab_para p_more_para">Εγκατάσταση και επίδειξη συσκευών στο χώρο σου</p>
         </div>
+        <div class="mobile_tab_contant">
+          <div
+            id="more-tab-mob-4"
+            class="traditions_tabs_content moreTabcontentMob"
+            style="display: none"
+          >
+            <img
+              src="./images/public-more/more-and-more.png"
+              alt="banner"
+              class="tabs_banner_img"
+            />
+            <div class="button_container">
+              <a href="" class="button __black">
+                Μάθε περισσότερα
+                <img src="./images/public-more/button-icon.svg" alt="icon" class="btn_icon" />
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <!-- tab content -->
 
-    <div id="more-tab-1" class="traditions_tabs_content moreTabcontent" style="display: block">
-      <img src="./images/public-more/more-and-more.png" alt="banner" class="tabs_banner_img" />
-      <div class="button_container">
-        <a href="" class="button __black">
-          Μάθε περισσότερα
-          <img src="./images/public-more/button-icon.svg" alt="icon" class="btn_icon" />
-        </a>
+    <div class="public_tab_abouts">
+      <div id="more-tab-1" class="traditions_tabs_content moreTabcontent" style="display: block">
+        <img src="./images/public-more/more-and-more.png" alt="banner" class="tabs_banner_img" />
+        <div class="button_container">
+          <a href="" class="button __black">
+            Μάθε περισσότερα
+            <img src="./images/public-more/button-icon.svg" alt="icon" class="btn_icon" />
+          </a>
+        </div>
       </div>
-    </div>
 
-    <!-- 2 -->
+      <!-- 2 -->
 
-    <div id="more-tab-2" class="traditions_tabs_content moreTabcontent" style="display: none">
-      <img src="./images/public-more/more-and-more.png" alt="banner" class="tabs_banner_img" />
-    </div>
-
-    <!-- 3 -->
-
-    <div id="more-tab-3" class="traditions_tabs_content moreTabcontent" style="display: none">
-      <img src="./images/public-more/more-and-more.png" alt="banner" class="tabs_banner_img" />
-      <div class="button_container">
-        <a href="" class="button __black">
-          Μάθε περισσότερα
-          <img src="./images/public-more/button-icon.svg" alt="icon" class="btn_icon" />
-        </a>
+      <div id="more-tab-2" class="traditions_tabs_content moreTabcontent" style="display: none">
+        <img src="./images/public-more/more-and-more.png" alt="banner" class="tabs_banner_img" />
       </div>
-    </div>
 
-    <!-- 4 -->
+      <!-- 3 -->
 
-    <div id="more-tab-4" class="traditions_tabs_content moreTabcontent" style="display: none">
-      <img src="./images/public-more/more-and-more.png" alt="banner" class="tabs_banner_img" />
+      <div id="more-tab-3" class="traditions_tabs_content moreTabcontent" style="display: none">
+        <img src="./images/public-more/more-and-more.png" alt="banner" class="tabs_banner_img" />
+        <div class="button_container">
+          <a href="" class="button __black">
+            Μάθε περισσότερα
+            <img src="./images/public-more/button-icon.svg" alt="icon" class="btn_icon" />
+          </a>
+        </div>
+      </div>
+
+      <!-- 4 -->
+
+      <div id="more-tab-4" class="traditions_tabs_content moreTabcontent" style="display: none">
+        <img src="./images/public-more/more-and-more.png" alt="banner" class="tabs_banner_img" />
+      </div>
     </div>
   </div>
 </section>

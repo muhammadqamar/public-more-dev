@@ -9,6 +9,11 @@
 .public_traditions_section {
   width: 100%;
   margin-bottom: 80px;
+  padding-left: 59px;
+
+  @media (max-width: 1200px) {
+    padding: 0 24px;
+  }
 
   .public_more_heading {
     max-width: 1159px;
@@ -60,9 +65,16 @@
       color: #000000;
       padding-right: 20px;
       margin: 0;
+      @media (max-width: 768px) {
+        padding-right: 0;
+      }
 
       &.sup_label_heading {
         padding-right: 80px;
+
+        @media (max-width: 768px) {
+          padding-right: 0;
+        }
       }
 
       & > span {
@@ -99,25 +111,21 @@
 
       @media (max-width: 1200px) {
         width: 100%;
-      }
-
-      @media (max-width: 799px) {
         gap: 12px;
       }
 
       .tab_card {
         border-radius: 10px;
         cursor: pointer;
+        width: 376px;
+        height: 145px;
         @media (max-width: 1200px) {
           width: 100%;
         }
 
         &.__not_active {
-          width: 376px;
-          height: 145px;
           background: #f3f3f3;
           padding: 24px 27px;
-
           @media (max-width: 1200px) {
             width: 100%;
           }
@@ -127,18 +135,19 @@
           background: #ffffff !important;
           border: 2px solid rgba(0, 0, 0, 0.14);
           box-shadow: 0px 6px 20px 0px #0000003b;
-          width: 401px !important;
-          height: 170px !important;
           padding: 34px 27px;
+          transform: scale3d(1.1, 1.2, 1.1);
+          margin: 16px 0;
 
           @media (max-width: 599px) {
             padding: 34px 10px;
           }
-
           @media (max-width: 1200px) {
             width: 100% !important;
             height: auto !important;
             padding-bottom: 10px !important;
+            transform: inherit;
+            margin: 0;
           }
         }
 
@@ -259,16 +268,14 @@
       border-top-left-radius: 278px;
       border-bottom-left-radius: 278px;
       overflow: hidden;
-
+      margin-left: auto;
       @media (max-width: 992px) {
         max-width: auto;
         height: auto;
         overflow: inherit;
         position: inherit;
       }
-
       @media (max-width: 1200px) {
-        margin-left: auto;
         margin-right: -10px;
       }
 

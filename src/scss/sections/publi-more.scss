@@ -11,12 +11,20 @@
   padding: 68px 0 0;
   margin-bottom: 179px;
 
+  @media (max-width: 992px) {
+    margin-bottom: 237px;
+  }
+  @media (min-width: 992px) and (max-width: 1200px) {
+    margin-bottom: 270px;
+  }
+
   .publi_more_hero_content {
     width: clamp(300px, 93vw, 1159px);
     margin: 0 auto clamp(38px, 14vw, 140px);
 
     &._public_content {
       @media (max-width: 999px) {
+        width: 100%;
         padding: 0 24px;
       }
     }

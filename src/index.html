@@ -1,23 +1,42 @@
-<module href="./src/layouts/page-full.html" title="">
-  <div data-holy>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> -->
+
     <style>
       @import "./scss/style.scss";
     </style>
+  </head>
 
-    <article class="main-article">
-      <include src="sections/public-more-hero.html"></include>
+  <body>
+    <!-- <lottie-player
+      src="./PBL_More_Lottie/animations/animation_1.json"
+      background="transparent"
+      speed="1"
+      style="width: 300px; height: 300px"
+      loop
+      controls
+      autoplay
+    ></lottie-player> -->
+
+    <include src="sections/public-more-hero.html"></include>
+    <div class="main__container">
       <include src="sections/public-traditions.html"></include>
       <include src="sections/public-payments.html"></include>
       <include src="sections/public-support.html"></include>
       <include src="sections/public-reward-programs.html"></include>
       <include src="sections/public-environments.html"></include>
       <include src="sections/public-more-and-more.html"></include>
-    </article>
+    </div>
     <script>
       // traditions Tabs
 
       function openTraditionsTab(evt, tabName, disTab) {
-        var i, tabcontent, tablinks, box, width, mobiletab;
+        var i, tabcontent, tablinks, box, width, moreTabcontentMob;
         box = document.querySelector(".traditions_tabs_flex_box");
         width = box.clientWidth;
 
@@ -72,37 +91,58 @@
 
       // suppert Tabs
 
-      function openSuppertTab(evt, tabName) {
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("supTabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-          tabcontent[i].style.display = "none";
+      function openSuppertTab(evt, tabName, disTab) {
+        var i, tabcontent, tablinks, box, width, supTabcontentMob;
+        box = document.querySelector(".traditions_tabs_flex_box");
+        width = box.clientWidth;
+
+        if (width <= 1152) {
+          supTabcontentMob = document.getElementsByClassName("supTabcontentMob");
+          for (i = 0; i < supTabcontentMob.length; i++) {
+            supTabcontentMob[i].style.display = "none";
+          }
+        } else if (width >= 1153) {
+          tabcontent = document.getElementsByClassName("supTabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
         }
         tablinks = document.getElementsByClassName("__not_active");
-
         for (i = 0; i < tablinks.length; i++) {
           tablinks[i].className = tablinks[i].className.replace(" __active", "");
         }
         document.getElementById(tabName).style.display = "block";
+        document.getElementById(disTab).style.display = "block";
         evt.currentTarget.className += " __active";
       }
 
       // public more and more
 
-      function openPublicMoreTab(evt, tabName) {
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("moreTabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-          tabcontent[i].style.display = "none";
-        }
-        tablinks = document.getElementsByClassName("__not_active");
+      function openPublicMoreTab(evt, tabName, disTab) {
+        var i, tabcontent, tablinks, box, width, moreTabcontentMob;
+        box = document.querySelector(".traditions_tabs_flex_box");
+        width = box.clientWidth;
 
+        if (width <= 1152) {
+          moreTabcontentMob = document.getElementsByClassName("moreTabcontentMob");
+          for (i = 0; i < moreTabcontentMob.length; i++) {
+            moreTabcontentMob[i].style.display = "none";
+          }
+        } else if (width >= 1153) {
+          tabcontent = document.getElementsByClassName("moreTabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+        }
+
+        tablinks = document.getElementsByClassName("__not_active");
         for (i = 0; i < tablinks.length; i++) {
           tablinks[i].className = tablinks[i].className.replace(" __active", "");
         }
         document.getElementById(tabName).style.display = "block";
+        document.getElementById(disTab).style.display = "block";
         evt.currentTarget.className += " __active";
       }
     </script>
-  </div>
-</module>
+  </body>
+</html>
