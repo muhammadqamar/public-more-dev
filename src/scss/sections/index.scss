@@ -3,10 +3,13 @@
 @forward "./public-reward-programs";
 @forward "./public-environments";
 
+* {
+  scroll-behavior: smooth;
+}
+
 .main__container {
   max-width: 1440px;
   margin: 0 auto;
-
   position: relative;
 
   &::before {
