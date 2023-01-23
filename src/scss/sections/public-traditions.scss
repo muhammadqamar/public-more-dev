@@ -135,8 +135,9 @@
 
         &.__active {
           background: #ffffff !important;
-          outline: rgba(0, 0, 0, 0.14) solid 2px !important;
-          box-shadow: 0px 6px 20px 0px #0000003b;
+          // outline: rgba(0, 0, 0, 0.14) solid 2px !important;
+          box-shadow: 0 6px 20px #0000003b, 0 0 0 2px #00000024;
+          // box-shadow: 0px 6px 20px 0px #0000003b;
           padding: 24px 27px 24px 40px;
           transform: scale3d(1.1, 1.2, 1.1);
           margin: 16px 0;
@@ -160,8 +161,9 @@
 
         &:hover {
           background: #ffffff;
-          outline: rgba(0, 0, 0, 0.14) solid 2px !important;
-          outline-color: rgba(0, 0, 0, 0.14) !important;
+          box-shadow: 0 6px 20px #0000003b, 0 0 0 2px #00000024;
+          // outline: rgba(0, 0, 0, 0.14) solid 2px !important;
+          // outline-color: rgba(0, 0, 0, 0.14) !important;
           animation: none !important;
           -webkit-border-radius: 10px;
         }
