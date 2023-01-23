@@ -87,6 +87,7 @@
       rgba(0, 0, 0, 0) 100%
     );
     backdrop-filter: blur(102px);
+    -webkit-backdrop-filter: blur(102px);
   }
 
   @media (max-width: 936px) {
@@ -114,6 +115,7 @@
       background: #ffffff;
       border: 6px solid rgba(0, 0, 0, 0.09);
       backdrop-filter: blur(27px);
+      -webkit-backdrop-filter: blur(27px);
       border-radius: 12px;
       display: flex;
       align-items: center;
