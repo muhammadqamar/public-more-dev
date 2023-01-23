@@ -140,6 +140,7 @@
           padding: 24px 27px 24px 40px;
           transform: scale3d(1.1, 1.2, 1.1);
           margin: 16px 0;
+          -webkit-border-radius: 10px;
 
           @media (max-width: 599px) {
             padding: 34px 10px;
@@ -162,6 +163,7 @@
           outline: rgba(0, 0, 0, 0.14) solid 2px !important;
           outline-color: rgba(0, 0, 0, 0.14) !important;
           animation: none !important;
+          -webkit-border-radius: 10px;
         }
 
         .tab_card_flex {
