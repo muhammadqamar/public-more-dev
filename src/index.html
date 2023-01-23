@@ -1,18 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+<module href="./src/layouts/page-full.html" title="">
+  <div data-holy>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
     <style>
       @import "./scss/style.scss";
     </style>
-  </head>
 
-  <body>
     <include src="sections/public-more-hero.html"></include>
     <div class="main__container">
       <include src="sections/public-traditions.html"></include>
@@ -134,5 +127,5 @@
         evt.currentTarget.className += " __active";
       }
     </script>
-  </body>
-</html>
+  </div>
+</module>
