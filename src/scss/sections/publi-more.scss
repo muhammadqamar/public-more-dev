@@ -105,9 +105,32 @@
     width: clamp(300px, 93vw, 1159px);
     margin: 0 auto;
     position: relative;
-
     @media (max-width: 999px) {
       width: 100%;
+    }
+
+    .search_results_box {
+      display: none;
+      position: absolute;
+      width: 383px;
+      max-height: 232px;
+      top: 60px;
+      left: -6px;
+      background: #ffffff;
+      border: 6px solid rgba(0, 0, 0, 0.09);
+      backdrop-filter: blur(27px);
+      -webkit-backdrop-filter: blur(27px);
+      border-radius: 12px;
+      padding: 28px 37px 32px 30px;
+      z-index: 2;
+      flex-direction: column;
+      gap: 14px;
+      overflow-y: auto;
+
+      @media (max-width: 499px) {
+        width: 100%;
+        padding: 28px 16px 30px;
+      }
     }
 
     .hero_search_fild {
@@ -269,4 +292,30 @@
 .lottie_link_anima {
   width: 0 !important;
   height: 0 !important;
+}
+
+.seachField {
+  width: 100%;
+  display: flex;
+  gap: 23px;
+  align-items: center;
+
+  &:hover {
+    background: #f3f3f3;
+    border-radius: 12px;
+  }
+
+  .search_box_icon {
+    width: auto;
+    height: 48px;
+    object-fit: contain;
+  }
+  .search_heading {
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 40px;
+    letter-spacing: 0.03em;
+    color: #000000;
+    margin: 0;
+  }
 }

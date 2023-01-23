@@ -17,6 +17,102 @@
     </div>
     <script>
       // traditions Tabs
+      function closeSearch() {
+        document.getElementById("searchResult").css.display = "none";
+      }
+      function searchResult(e) {
+        const DeliveryTab = [
+          {
+            link: "#NextDayDelivery",
+            heading: "NextDayDelivery",
+            icon: "https://public-more-dev.netlify.app/flex-delivery-tab-img-1.9833ece7.png",
+            includeText: true,
+          },
+          {
+            link: "#FlexDelivery",
+            heading: "FlexDelivery",
+            icon: "https://public-more-dev.netlify.app/flex-delivery-tab-img-2.bf285fb8.png",
+            includeText: true,
+          },
+          {
+            link: "#lockerpickup",
+            heading: "lockerpickup",
+            icon: "https://public-more-dev.netlify.app/flex-delivery-tab-img-3.32eb0c24.png",
+            includeText: true,
+          },
+          {
+            link: "#ExpressDelivery",
+            heading: "ExpressDelivery",
+            icon: "https://public-more-dev.netlify.app/flex-delivery-tab-img-4.a2bf3cf2.png",
+            includeText: true,
+          },
+          {
+            link: "#flexpay",
+            heading: "flexpay",
+            icon: "https://public-more-dev.netlify.app/flexpay.825677d1.png",
+          },
+          {
+            link: "#klarna",
+            heading: "klarna",
+            icon: "https://public-more-dev.netlify.app/klarna.d21ae537.png",
+          },
+          {
+            link: "#paypal",
+            heading: "paypal",
+            icon: "https://public-more-dev.netlify.app/paypal.922278ab.png",
+          },
+          {
+            link: "#iris",
+            heading: "iris",
+            icon: "https://public-more-dev.netlify.app/iris.a1e75f57.png",
+          },
+          {
+            link: "#safetynet",
+            heading: "safetynet",
+            icon: "https://public-more-dev.netlify.app/safetynet.014ae1c5.png",
+          },
+          {
+            link: "#iRepair",
+            heading: "iRepair",
+            icon: "https://public-more-dev.netlify.app/iRepair.b3d45264.png",
+          },
+          {
+            link: "#publicbusiness",
+            heading: "publicbusiness",
+            icon: "https://public-more-dev.netlify.app/p-more-img-1.55763752.png",
+          },
+          {
+            link: "#bookfriends",
+            heading: "bookfriends",
+            icon: "https://public-more-dev.netlify.app/p-more-img-2.7d845010.png",
+          },
+          {
+            link: "#tickets",
+            heading: "tickets",
+            icon: "https://public-more-dev.netlify.app/p-more-img-3.2e707464.png",
+          },
+          {
+            link: "#blog",
+            heading: "blog",
+            icon: "https://public-more-dev.netlify.app/p-more-img-4.227b9367.png",
+          },
+        ];
+        const searchDev = document.getElementById("searchResult");
+        if (e.value) {
+          searchDev.style.display = "flex";
+          searchDev.innerHTML = DeliveryTab.filter((data) =>
+            data.heading?.toLowerCase().includes(e.value?.toLowerCase())
+          )
+            .map((data2) => {
+              return data2.includeText
+                ? `<a href="${data2.link}" onclick="closeSearch()" class="seachField"><img class='search_box_icon'  src="${data2.icon}" alt="icon"><h4 class='search_heading'>${data2.heading}</h4></a>`
+                : `<a href="${data2.link}" onclick="closeSearch()" class="seachField"><img class='search_box_icon'  src="${data2.icon}" alt="icon"></a>`;
+            })
+            .join(" ");
+        } else {
+          searchDev.style.display = "none";
+        }
+      }
 
       function openTraditionsTab(evt, tabName, disTab) {
         var i, tabcontent, tablinks, box, width, moreTabcontentMob;

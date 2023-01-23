@@ -20,10 +20,18 @@
 <section class="hero_public_search_section">
   <div class="publi_more_hero_content">
     <div class="hero_search_fild">
-      <input type="text" placeholder="Αναζήτηση" class="search_input" />
+      <input
+        type="text"
+        id="publicSearch"
+        onkeyup="searchResult(this)"
+        placeholder="Αναζήτηση"
+        class="search_input"
+      />
       <div class="search_icon_box">
         <img src="./images/public-more/search-icon.svg" alt="search" class="search_icon" />
       </div>
+
+      <div class="search_results_box" id="searchResult"></div>
     </div>
     <div class="public_hero_item_boxs">
       <!-- 1 -->
@@ -85,3 +93,5 @@
     </div>
   </div>
 </section>
+
+<script></script>
