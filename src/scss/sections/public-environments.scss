@@ -43,7 +43,7 @@
       }
     }
     &.__refurbished_banner {
-      margin: 0 auto 145px 0;
+      margin: 0 auto 90px 0;
 
       @media (max-width: 768px) {
         margin: 0 24px 16px 0;
@@ -62,6 +62,19 @@
       width: 100%;
       height: auto;
       object-fit: contain;
+
+      @media (max-width: 992px) {
+        display: none;
+      }
+    }
+    .env_banner_img_2 {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+
+      @media (min-width: 992px) {
+        display: none;
+      }
     }
 
     .env_btn {
@@ -81,7 +94,7 @@
 
       &.__refurbished_btn {
         justify-content: flex-start;
-        margin: -170px 0 0 95px;
+        margin: -100px 0 0 115px;
 
         @media (max-width: 768px) {
           margin: 8px 0 0 24px;
@@ -91,8 +104,8 @@
           margin: 16px 0 0 24px;
         }
 
-        @media (min-width: 992px) and (max-width: 1270px) {
-          margin: -130px 0 0 65px;
+        @media (min-width: 992px) and (max-width: 1099px) {
+          margin: -100px 0 0 90px;
         }
       }
     }
