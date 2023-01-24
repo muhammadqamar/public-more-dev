@@ -119,12 +119,14 @@
         box = document.querySelector(".traditions_tabs_flex_box");
         width = box.clientWidth;
 
+        console.log("width", width);
+
         if (width <= 1152) {
           mobiletab = document.getElementsByClassName("mobileTab");
           for (i = 0; i < mobiletab.length; i++) {
             mobiletab[i].style.display = "none";
           }
-        } else if (width >= 1153) {
+        } else if (width >= 1142) {
           tabcontent = document.getElementsByClassName("tabcontent");
           for (i = 0; i < tabcontent.length; i++) {
             tabcontent[i].style.display = "none";
@@ -151,7 +153,7 @@
           for (i = 0; i < mobiletab.length; i++) {
             mobiletab[i].style.display = "none";
           }
-        } else if (width >= 1153) {
+        } else if (width >= 1142) {
           tabcontent = document.getElementsByClassName("payTabcontent");
           for (i = 0; i < tabcontent.length; i++) {
             tabcontent[i].style.display = "none";
@@ -180,7 +182,7 @@
           for (i = 0; i < supTabcontentMob.length; i++) {
             supTabcontentMob[i].style.display = "none";
           }
-        } else if (width >= 1153) {
+        } else if (width >= 1142) {
           tabcontent = document.getElementsByClassName("supTabcontent");
           for (i = 0; i < tabcontent.length; i++) {
             tabcontent[i].style.display = "none";
@@ -207,7 +209,7 @@
           for (i = 0; i < moreTabcontentMob.length; i++) {
             moreTabcontentMob[i].style.display = "none";
           }
-        } else if (width >= 1153) {
+        } else if (width >= 1142) {
           tabcontent = document.getElementsByClassName("moreTabcontent");
           for (i = 0; i < tabcontent.length; i++) {
             tabcontent[i].style.display = "none";
