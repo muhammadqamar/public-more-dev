@@ -116,17 +116,17 @@
 
       function openTraditionsTab(evt, tabName, disTab) {
         var i, tabcontent, tablinks, box, width, moreTabcontentMob;
-        box = document.querySelector(".traditions_tabs_flex_box");
+        box = document.querySelector(".traditions_tabs_flex_box_mob");
         width = box.clientWidth;
 
         console.log("width", width);
 
-        if (width <= 1152) {
+        if (width <= 1200) {
           mobiletab = document.getElementsByClassName("mobileTab");
           for (i = 0; i < mobiletab.length; i++) {
             mobiletab[i].style.display = "none";
           }
-        } else if (width >= 1142) {
+        } else if (width >= 1201) {
           tabcontent = document.getElementsByClassName("tabcontent");
           for (i = 0; i < tabcontent.length; i++) {
             tabcontent[i].style.display = "none";
@@ -145,15 +145,15 @@
 
       function openPayTab(evt, tabName, disTab) {
         var i, tabcontent, tablinks, box, width, mobiletab;
-        box = document.querySelector(".traditions_tabs_flex_box");
+        box = document.querySelector(".traditions_tabs_flex_box_mob");
         width = box.clientWidth;
 
-        if (width <= 1152) {
+        if (width <= 1200) {
           mobiletab = document.getElementsByClassName("payTabcontentMob");
           for (i = 0; i < mobiletab.length; i++) {
             mobiletab[i].style.display = "none";
           }
-        } else if (width >= 1142) {
+        } else if (width >= 1201) {
           tabcontent = document.getElementsByClassName("payTabcontent");
           for (i = 0; i < tabcontent.length; i++) {
             tabcontent[i].style.display = "none";
@@ -174,15 +174,15 @@
 
       function openSuppertTab(evt, tabName, disTab) {
         var i, tabcontent, tablinks, box, width, supTabcontentMob;
-        box = document.querySelector(".traditions_tabs_flex_box");
+        box = document.querySelector(".traditions_tabs_flex_box_mob");
         width = box.clientWidth;
 
-        if (width <= 1152) {
+        if (width <= 1200) {
           supTabcontentMob = document.getElementsByClassName("supTabcontentMob");
           for (i = 0; i < supTabcontentMob.length; i++) {
             supTabcontentMob[i].style.display = "none";
           }
-        } else if (width >= 1142) {
+        } else if (width >= 1201) {
           tabcontent = document.getElementsByClassName("supTabcontent");
           for (i = 0; i < tabcontent.length; i++) {
             tabcontent[i].style.display = "none";
@@ -201,15 +201,15 @@
 
       function openPublicMoreTab(evt, tabName, disTab) {
         var i, tabcontent, tablinks, box, width, moreTabcontentMob;
-        box = document.querySelector(".traditions_tabs_flex_box");
+        box = document.querySelector(".traditions_tabs_flex_box_mob");
         width = box.clientWidth;
 
-        if (width <= 1152) {
+        if (width <= 1200) {
           moreTabcontentMob = document.getElementsByClassName("moreTabcontentMob");
           for (i = 0; i < moreTabcontentMob.length; i++) {
             moreTabcontentMob[i].style.display = "none";
           }
-        } else if (width >= 1142) {
+        } else if (width >= 1201) {
           tabcontent = document.getElementsByClassName("moreTabcontent");
           for (i = 0; i < tabcontent.length; i++) {
             tabcontent[i].style.display = "none";
