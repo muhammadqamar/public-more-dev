@@ -152,9 +152,10 @@
       gap: 14px;
       overflow-y: auto;
 
-      @media (max-width: 499px) {
+      @media (max-width: 699px) {
         width: 100%;
         padding: 28px 16px 30px;
+        gap: 18px;
       }
     }
 
@@ -334,6 +335,10 @@
     width: auto;
     height: 48px;
     object-fit: contain;
+
+    @media (max-width: 699px) {
+      height: 32px;
+    }
   }
   .search_heading {
     font-weight: 800;
@@ -342,5 +347,10 @@
     letter-spacing: 0.03em;
     color: #000000;
     margin: 0;
+
+    @media (max-width: 699px) {
+      font-size: 18px;
+      line-height: 28px;
+    }
   }
 }
