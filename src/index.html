@@ -100,6 +100,24 @@
             icon: "https://public-more-dev.netlify.app/PB-icon-4.d578a3eb.svg",
             includeText: true,
           },
+          {
+            link: "#trade&save",
+            heading: "trade&save",
+            icon: "",
+            includeText: true,
+          },
+          {
+            link: "#loveearth",
+            heading: "Love Earth",
+            icon: "",
+            includeText: true,
+          },
+          {
+            link: "#refurbished",
+            heading: "Refurbished",
+            icon: "",
+            includeText: true,
+          },
         ];
         const searchDev = document.getElementById("searchResult");
         if (e.value) {
@@ -109,7 +127,7 @@
           )
             .map((data2) => {
               return data2.includeText
-                ? `<a href="${data2.link}" onclick="closeSearch()" class="seachField"><img class='search_box_icon'  src="${data2.icon}" alt="icon"><h4 class='search_heading'>${data2.heading}</h4></a>`
+                ? `<a href="${data2.link}" onclick="closeSearch()" class="seachField"><img class='search_box_icon'  src="${data2.icon}" alt=""><h4 class='search_heading'>${data2.heading}</h4></a>`
                 : `<a href="${data2.link}" onclick="closeSearch()" class="seachField"><img class='search_box_icon'  src="${data2.icon}" alt="icon"></a>`;
             })
             .join(" ");

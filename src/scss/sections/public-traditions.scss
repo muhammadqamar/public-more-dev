@@ -128,6 +128,11 @@
         &.__not_active {
           background: #f3f3f3;
           padding: 24px 27px 24px 40px;
+
+          @media (max-width: 599px) {
+            padding: 24px 27px;
+          }
+
           @media (max-width: 1200px) {
             width: 100%;
           }
@@ -168,6 +173,11 @@
               margin-top: 23px;
             }
           }
+          .tab_card_flex {
+            @media (max-width: 599px) {
+              padding-left: 13px;
+            }
+          }
         }
 
         &:hover {
@@ -186,9 +196,9 @@
           align-items: flex-start;
           gap: 22px;
 
-          @media (max-width: 599px) {
-            padding-left: 13px;
-          }
+          // @media (max-width: 599px) {
+          //   padding-left: 13px;
+          // }
         }
 
         .tab_shap {
@@ -293,12 +303,13 @@
     }
     .traditions_tabs_content {
       max-width: 958.27px;
-      height: 561px;
-      position: relative;
+      height: auto;
+      // height: 561px;
+      // position: relative;
       flex: 1 1;
       border-top-left-radius: 278px;
       border-bottom-left-radius: 278px;
-      overflow: hidden;
+      // overflow: hidden;
       margin-left: auto;
       @media (max-width: 992px) {
         max-width: auto;
@@ -311,9 +322,9 @@
       }
 
       .tabs_banner_img {
-        position: absolute;
-        top: 0;
-        left: 0;
+        // position: absolute;
+        // top: 0;
+        // left: 0;
         width: auto;
         height: auto;
         border-top-left-radius: 335px;
@@ -324,39 +335,17 @@
         }
       }
 
-      .tab_image_content {
-        position: absolute;
-
-        &._next_day {
-          width: 363px;
-          right: 80px;
-          bottom: 58px;
-        }
-
-        .tab_img_heading {
-          font-weight: 800;
-          font-size: 24px;
-          line-height: 31px;
-          text-align: center;
-          letter-spacing: -0.02em;
-          margin: 0 0 10px;
-          color: #ffffff;
-        }
-
-        .tab_img_sub_text {
-          font-weight: 400;
-          font-size: 18px;
-          line-height: 25px;
-          text-align: center;
-          letter-spacing: 0.02em;
-          color: #ffffff;
-        }
-      }
-
       .button_container {
-        position: absolute;
-        right: 37px;
-        bottom: 36px;
+        // position: absolute;
+        // right: 37px;
+        // bottom: 36px;
+        margin: 16px 37px 0 0;
+        display: flex;
+        justify-content: flex-end;
+
+        // &._first_tab_btn {
+        //   bottom: 0;
+        // }
 
         @media (max-width: 599px) {
           margin-right: 10px;
