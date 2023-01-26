@@ -16,6 +16,10 @@
 
   &.__black {
     background: #000000;
+
+    &:hover {
+      background: #e64a19;
+    }
   }
   &.__purple {
     background: rgba(95, 38, 217, 1);
