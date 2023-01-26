@@ -1,4 +1,4 @@
-.payent_section {
+.tradition_section {
   margin-top: 108px;
 }
 
@@ -9,7 +9,7 @@
 .public_traditions_section {
   width: 100%;
   margin-bottom: 80px;
-  padding-left: 59px;
+  padding: 0;
 
   @media (max-width: 1200px) {
     padding: 0 24px;
@@ -97,10 +97,17 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 18px;
+    gap: 47px;
+
+    padding-left: 59px;
+
+    @media (min-width: 1200px) and (max-width: 1400px) {
+      padding-left: clamp(24px, 2.5vw, 59px);
+    }
 
     @media (max-width: 1200px) {
       display: block;
+      padding-left: 0;
     }
 
     .traditions_tabs_bar {
