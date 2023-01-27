@@ -1,0 +1,281 @@
+<div data-holy>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+  <style>
+    @import "./scss/style.scss";
+  </style>
+
+  <include src="sections/public-more-hero.html"></include>
+  <div class="main__container">
+    <include src="sections/public-payments.html"></include>
+    <include src="sections/public-traditions.html"></include>
+    <include src="sections/public-support.html"></include>
+    <include src="sections/public-reward-programs.html"></include>
+    <include src="sections/public-environments.html"></include>
+    <include src="sections/public-more-and-more.html"></include>
+  </div>
+  <script>
+    // traditions Tabs
+    function closeSearch() {
+      document.getElementById("searchResult").style.display = "none";
+    }
+    function searchResult(e) {
+      const DeliveryTab = [
+        {
+          link: "#NextDayDelivery",
+          heading: "Next Day Delivery",
+          text: "Παράδοση παραγγελίας την επόμενη μέρα",
+          icon: "https://public-more-dev.netlify.app/flex-delivery-tab-img-1.9833ece7.png",
+          includeText: true,
+        },
+        {
+          link: "#FlexDelivery",
+          heading: "Flex Delivery",
+          text: "Ευελιξία 30 ημερών για παράδοση όποτε θες!",
+          icon: "https://public-more-dev.netlify.app/flex-delivery-tab-img-2.bf285fb8.png",
+          includeText: true,
+        },
+        {
+          link: "#lockerpickup",
+          heading: "lockerpickup",
+          text: "Παράλαβε Public όποτε θες από 1.200 BOX NOW lockers!",
+          icon: "https://public-more-dev.netlify.app/flex-delivery-tab-img-3.32eb0c24.png",
+          includeText: true,
+        },
+        {
+          link: "#expresspickup",
+          heading: "expresspickup",
+          text: "Παραλαβή online παραγγελίας σε 60'	",
+          icon: "https://public-more-dev.netlify.app/flex-delivery-tab-img-4.a2bf3cf2.png",
+          includeText: true,
+        },
+        {
+          link: "#flexpay",
+          heading: "flexpay",
+          text: "Πληρωμή σε έως 36 δόσεις, χωρίς πιστωτική	",
+          icon: "https://public-more-dev.netlify.app/flexpay.825677d1.png",
+        },
+        {
+          link: "#klarna",
+          heading: "klarna",
+          text: "Πληρωμή σε 3 άτοκες δόσεις, χωρίς πιστωτική",
+          icon: "https://public-more-dev.netlify.app/klarna-icon.67106c8b.png",
+        },
+        {
+          link: "#paypal",
+          heading: "paypal",
+          text: "Εύκολα και γρήγορα με PayPal!",
+          icon: "https://public-more-dev.netlify.app/paypal-icon.922278ab.png",
+        },
+        {
+          link: "#iris",
+          heading: "iris",
+          text: "Χωρίς κάρτα, με τον λογαριασμό σου!",
+          icon: "https://public-more-dev.netlify.app/iris.43fff485.png",
+        },
+        {
+          link: "#safetynet",
+          heading: "safetynet",
+          text: "Υπηρεσία προστασίας συσκευής ",
+          icon: "https://public-more-dev.netlify.app/safetynet.014ae1c5.png",
+        },
+        {
+          link: "#iRepair",
+          heading: "iRepair",
+          text: "Επισκευές και υποστήριξη για συσκευές τεχνολογίας",
+          icon: "https://public-more-dev.netlify.app/iRepair.02f6ada5.png",
+        },
+        {
+          link: "#publicBusiness",
+          heading: "publicbusiness",
+          text: "Η all-in-one λύση για επαγγελματίες και επιχειρήσεις",
+          icon: "https://public-more-dev.netlify.app/PB-icon-1.f5a8e830.svg",
+          includeText: true,
+        },
+        {
+          link: "#bookFriends",
+          heading: "bookfriends",
+          text: "Διαβάζουμε και σου προτείνουμε!",
+          icon: "https://public-more-dev.netlify.app/PB-icon-2.cdd1ecc5.svg",
+          includeText: true,
+        },
+        {
+          link: "#tickets",
+          heading: "Tickets",
+          text: "Το εισιτήριo στις πιο δυνατές σου στιγμές!",
+          icon: "https://public-more-dev.netlify.app/PB-icon-3.00e4940a.svg",
+          includeText: true,
+        },
+        {
+          link: "#blog",
+          heading: "Blog",
+          text: "Σε «διαβάζουμε» και προτείνουμε!",
+          icon: "https://public-more-dev.netlify.app/PB-icon-4.d578a3eb.svg",
+          includeText: true,
+        },
+        {
+          link: "#trade&save",
+          heading: "trade&save",
+          text: "Trade & Save Επιστροφή παλιάς συσκευής για νέες αγορές με κέρδος έως και 1.000€!",
+          icon: "",
+          includeText: true,
+        },
+        {
+          link: "#loveearth",
+          heading: "Love Earth",
+          text: "Love Earth για έναν βιώσιμο πλανήτη",
+          icon: "",
+          includeText: true,
+        },
+        {
+          link: "#refurbished",
+          heading: "Refurbished",
+          text: "Refurbished προϊόντα με εγγύηση ποιότητας Ήρθαν οι Ανακατασκευασμένες συσκευές second go",
+          icon: "",
+          includeText: true,
+        },
+      ];
+      const searchDev = document.getElementById("searchResult");
+
+      const searchData = DeliveryTab.filter((data) => {
+        return (
+          data.heading?.toLowerCase().includes(e.value?.toLowerCase()) ||
+          data.text?.toLowerCase().includes(e.value?.toLowerCase())
+        );
+      });
+
+      if (e.value) {
+        searchDev.style.display = "flex";
+        if (searchData.length > 0) {
+          searchDev.innerHTML = DeliveryTab.filter((data) => {
+            return (
+              data.heading?.toLowerCase().includes(e.value?.toLowerCase()) ||
+              data.text?.toLowerCase().includes(e.value?.toLowerCase())
+            );
+          })
+            .map((data2) => {
+              return data2.includeText
+                ? `<a href="${data2.link}" onclick="closeSearch()" class="seachField"><img class='search_box_icon'  src="${data2.icon}" alt=""><h4 class='search_heading'>${data2.heading}</h4></a>`
+                : `<a href="${data2.link}" onclick="closeSearch()" class="seachField"><img class='search_box_icon'  src="${data2.icon}" alt="icon"></a>`;
+            })
+            .join(" ");
+        } else {
+          return (searchDev.innerHTML = `<div onclick="closeSearch()" class="Not_search_found"> <h6 class="not_search_heading">Εδώ μπορείς να βρεις υπηρεσίες της Public.</h6><p class="not_search_para">Αν δεν βρήκες αυτό που ψάχνεις, χρησιμοποίησε την βασική αναζήτηση του site που γράφει “Ψάχνω για…”</p></div>`);
+        }
+      } else {
+        searchDev.style.display = "none";
+      }
+    }
+
+    function openTraditionsTab(evt, tabName, disTab) {
+      var i, tabcontent, tablinks, box, width, moreTabcontentMob;
+      box = document.querySelector(".traditions_tabs_flex_box_mob");
+      width = box.clientWidth;
+
+      console.log("width", width);
+
+      if (width <= 1200) {
+        mobiletab = document.getElementsByClassName("mobileTab");
+        for (i = 0; i < mobiletab.length; i++) {
+          mobiletab[i].style.display = "none";
+        }
+      } else if (width >= 1201) {
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+      }
+      tablinks = document.getElementsByClassName("__not_active");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" __active", "");
+      }
+      document.getElementById(tabName).style.display = "block";
+      document.getElementById(disTab).style.display = "block";
+      evt.currentTarget.className += " __active";
+    }
+
+    // payments Tabs
+
+    function openPayTab(evt, tabName, disTab) {
+      var i, tabcontent, tablinks, box, width, mobiletab;
+      box = document.querySelector(".traditions_tabs_flex_box_mob");
+      width = box.clientWidth;
+
+      if (width <= 1200) {
+        mobiletab = document.getElementsByClassName("payTabcontentMob");
+        for (i = 0; i < mobiletab.length; i++) {
+          mobiletab[i].style.display = "none";
+        }
+      } else if (width >= 1201) {
+        tabcontent = document.getElementsByClassName("payTabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+      }
+
+      tablinks = document.getElementsByClassName("__not_active");
+
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" __active", "");
+      }
+      document.getElementById(tabName).style.display = "block";
+      document.getElementById(disTab).style.display = "block";
+      evt.currentTarget.className += " __active";
+    }
+
+    // suppert Tabs
+
+    function openSuppertTab(evt, tabName, disTab) {
+      var i, tabcontent, tablinks, box, width, supTabcontentMob;
+      box = document.querySelector(".traditions_tabs_flex_box_mob");
+      width = box.clientWidth;
+
+      if (width <= 1200) {
+        supTabcontentMob = document.getElementsByClassName("supTabcontentMob");
+        for (i = 0; i < supTabcontentMob.length; i++) {
+          supTabcontentMob[i].style.display = "none";
+        }
+      } else if (width >= 1201) {
+        tabcontent = document.getElementsByClassName("supTabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+      }
+      tablinks = document.getElementsByClassName("__not_active");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" __active", "");
+      }
+      document.getElementById(tabName).style.display = "block";
+      document.getElementById(disTab).style.display = "block";
+      evt.currentTarget.className += " __active";
+    }
+
+    // public more and more
+
+    function openPublicMoreTab(evt, tabName, disTab) {
+      var i, tabcontent, tablinks, box, width, moreTabcontentMob;
+      box = document.querySelector(".traditions_tabs_flex_box_mob");
+      width = box.clientWidth;
+
+      if (width <= 1200) {
+        moreTabcontentMob = document.getElementsByClassName("moreTabcontentMob");
+        for (i = 0; i < moreTabcontentMob.length; i++) {
+          moreTabcontentMob[i].style.display = "none";
+        }
+      } else if (width >= 1201) {
+        tabcontent = document.getElementsByClassName("moreTabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+      }
+
+      tablinks = document.getElementsByClassName("__not_active");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" __active", "");
+      }
+      document.getElementById(tabName).style.display = "block";
+      document.getElementById(disTab).style.display = "block";
+      evt.currentTarget.className += " __active";
+    }
+  </script>
+</div>

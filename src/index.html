@@ -16,6 +16,24 @@
       <include src="sections/public-more-and-more.html"></include>
     </div>
     <script>
+      // slider
+
+      window.onscroll = function () {
+        stickySlider();
+      };
+
+      var sliderdiv = document.getElementById("searchSlider");
+      var sticky = sliderdiv.offsetTop;
+
+      function stickySlider() {
+        if (window.pageYOffset >= sticky) {
+          sliderdiv.classList.add("_sticky");
+          document.getElementById("searchResult").style.display = "none";
+        } else {
+          sliderdiv.classList.remove("_sticky");
+        }
+      }
+
       // traditions Tabs
       function closeSearch() {
         document.getElementById("searchResult").style.display = "none";
