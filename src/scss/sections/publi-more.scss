@@ -18,7 +18,15 @@
     left: 0;
     width: 100%;
 
-    @media (max-width: 1040px) {
+    @media (max-width: 615px) {
+      width: 1445px;
+      height: 1232px;
+      top: -291px;
+      left: -498px;
+      transform: rotate(330deg);
+    }
+
+    @media (min-width: 615px) and (max-width: 1040px) {
       width: 1245px;
       height: 701px;
     }
@@ -75,6 +83,17 @@
   @media (max-width: 936px) {
     position: fixed;
     z-index: 3;
+
+    .search_main_content {
+      .publi_more_hero_content {
+        .public_hero_item_boxs {
+          flex-direction: row !important;
+          .hero_item_box {
+            width: max-content !important;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -143,21 +162,6 @@
 
       @media (max-width: 936px) {
         min-height: 148px;
-      }
-    }
-
-    .lottie_animaction_background {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: -1;
-      transform: rotateX(180deg);
-      overflow: hidden;
-
-      @media (max-width: 1040px) {
-        width: 1245px;
-        height: 701px;
       }
     }
 
@@ -270,9 +274,8 @@
         gap: 13px;
 
         @media (max-width: 936px) {
-          // width: 950px;
           overflow: auto;
-          // flex-direction: column;
+          flex-direction: column;
         }
 
         .hero_item_box {
@@ -285,10 +288,9 @@
           cursor: pointer;
 
           @media (max-width: 936px) {
-            // width: clamp(190px, 4vw, 380px);
+            width: 100%;
             display: flex;
             align-items: center;
-            width: max-content;
             flex-shrink: 0;
           }
 
