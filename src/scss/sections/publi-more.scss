@@ -74,7 +74,7 @@
   }
   @media (max-width: 936px) {
     height: auto;
-    padding: 52px 24px 68px;
+    padding: 16px 24px;
   }
 
   @media (min-width: 936px) and (max-width: 999px) {
@@ -98,6 +98,10 @@
     background-position: bottom;
     background-size: cover;
     z-index: -1;
+
+    @media (max-width: 936px) {
+      min-height: 148px;
+    }
   }
 
   &::before {
@@ -115,6 +119,10 @@
     );
     backdrop-filter: blur(102px);
     -webkit-backdrop-filter: blur(102px);
+
+    @media (max-width: 936px) {
+      min-height: 148px;
+    }
   }
 
   .lottie_animaction_background {
@@ -138,6 +146,7 @@
     position: relative;
     @media (max-width: 999px) {
       width: 100%;
+      overflow: hidden;
     }
 
     .search_results_box {
@@ -184,7 +193,7 @@
 
       @media (max-width: 936px) {
         width: 100%;
-        margin-bottom: 53px;
+        margin-bottom: 16px;
       }
 
       .search_input {
@@ -240,7 +249,9 @@
       gap: 13px;
 
       @media (max-width: 936px) {
-        flex-direction: column;
+        // width: 950px;
+        overflow: auto;
+        // flex-direction: column;
       }
 
       .hero_item_box {
@@ -253,9 +264,11 @@
         cursor: pointer;
 
         @media (max-width: 936px) {
-          width: 100%;
+          // width: clamp(190px, 4vw, 380px);
           display: flex;
           align-items: center;
+          width: max-content;
+          flex-shrink: 0;
         }
 
         &:hover {
@@ -277,7 +290,6 @@
 
           @media (max-width: 936px) {
             width: clamp(72px, 24vw, 205px);
-            flex-shrink: 0;
             border-radius: 8px;
           }
 
@@ -308,7 +320,8 @@
           padding: 13px 24px 17px;
 
           @media (max-width: 768px) {
-            padding: 15px 19px 17px;
+            width: max-content;
+            padding: 6px 16px;
           }
 
           .item_name {
