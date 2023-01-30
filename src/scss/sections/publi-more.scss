@@ -72,22 +72,19 @@
 }
 
 ._sticky {
-  @media (max-width: 599px) {
-    top: -63px;
-  }
-
-  @media (min-width: 599px) and (max-width: 936px) {
-    top: -80px;
-  }
-
   @media (max-width: 936px) {
-    height: 162px !important;
+    height: auto !important;
     position: fixed;
     z-index: 3;
+    top: -2px;
+    left: 0;
 
     .search_main_content {
       padding: 16px 0 !important;
       .publi_more_hero_content {
+        .hero_search_fild {
+          display: none !important;
+        }
         .public_hero_item_boxs {
           flex-direction: row !important;
           .hero_item_box {
@@ -148,7 +145,7 @@
       z-index: -1;
 
       @media (max-width: 936px) {
-        min-height: 148px;
+        min-height: auto;
       }
     }
 
@@ -169,7 +166,7 @@
       -webkit-backdrop-filter: blur(102px);
 
       @media (max-width: 936px) {
-        min-height: 148px;
+        min-height: auto;
       }
     }
 
