@@ -51,7 +51,8 @@
     padding: 2px 12px 6px;
 
     &._max_btn {
-      width: 218px;
+      width: fit-content;
+      width: -webkit-fit-content;
     }
   }
 }

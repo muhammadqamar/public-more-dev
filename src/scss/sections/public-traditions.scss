@@ -1,15 +1,25 @@
 .tradition_section {
   margin-top: 108px;
+  @media (max-width: 599px) {
+    margin-top: 32px;
+  }
 }
 
 .suppert_section {
   margin-top: 99px;
+  @media (max-width: 599px) {
+    margin-top: 32px;
+  }
 }
 
 .public_traditions_section {
   width: 100%;
   margin-bottom: 80px;
   padding: 0;
+
+  @media (max-width: 599px) {
+    margin-bottom: 32px;
+  }
 
   @media (max-width: 1200px) {
     padding: 0 24px;
