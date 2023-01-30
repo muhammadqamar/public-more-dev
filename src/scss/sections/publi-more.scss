@@ -85,11 +85,18 @@
     z-index: 3;
 
     .search_main_content {
+      padding: 16px 0 !important;
       .publi_more_hero_content {
         .public_hero_item_boxs {
           flex-direction: row !important;
           .hero_item_box {
             width: max-content !important;
+            &:first-child {
+              margin-left: 18px;
+            }
+            &:last-child {
+              margin-right: 18px;
+            }
           }
         }
       }
