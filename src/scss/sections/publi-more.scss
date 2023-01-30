@@ -73,7 +73,7 @@
 
 ._sticky {
   @media (max-width: 936px) {
-    height: auto !important;
+    height: 0 !important;
     position: fixed;
     z-index: 3;
     top: -2px;
