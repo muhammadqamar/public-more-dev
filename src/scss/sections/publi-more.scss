@@ -76,8 +76,8 @@
     height: 0 !important;
     position: fixed;
     z-index: 3;
-    top: -2px;
     left: 0;
+    top: 96px; // Above 819px their sticky header has 96px height.
 
     .search_main_content {
       padding: 16px 0 !important;
@@ -99,6 +99,9 @@
         }
       }
     }
+  }
+  @media (max-width: 819px) {
+    top: 56px;
   }
 }
 
