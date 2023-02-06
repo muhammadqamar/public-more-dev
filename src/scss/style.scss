@@ -1,7 +1,18 @@
-@forward "./fonts";
-@forward "./reset";
+// @forward "./fonts";
 @forward "./variables";
-@forward "./external";
-@forward "./typography";
-@forward "./sections";
-@forward "./components";
+
+[data-holy] {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  // font: normal 1rem / 1.5 var(--font-family-regular);
+  font-size: 1rem;
+  line-height: 1.5;
+  font-style: normal;
+  font-family: var(--font-family-regular);
+
+  @import "./reset";
+  @import "./external";
+  @import "./typography";
+  @import "./sections";
+  @import "./components";
+}

@@ -3,14 +3,6 @@
 @forward "./public-reward-programs";
 @forward "./public-environments";
 
-* {
-  font-family: "ZonaPro";
-  scroll-behavior: smooth;
-  --font-family-regular: "ZonaPro-Regular", "Open Sans", sans-serif;
-  --font-family-semi: "ZonaPro-SemiBold", "Open Sans", sans-serif;
-  --font-family-bold: "ZonaPro-Bold", "Open Sans", sans-serif;
-}
-
 .main__container {
   max-width: 1440px;
   margin: 0 auto;
@@ -22,6 +14,9 @@
     top: -115px;
     right: 72px;
     z-index: -1;
+    // aspect-ratio: 433 / 334;
+    // width: 100%;
+    // height: auto;
     width: 433px;
     height: 334px;
     background-image: url("../images/public-more/arrow-img.png");
