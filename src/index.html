@@ -1,6 +1,9 @@
 <module href="./src/layouts/page-full.html" title="">
   <div data-holy>
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script
+      src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"
+      async
+    ></script>
 
     <style>
       @import "./scss/fonts.scss";
@@ -30,7 +33,15 @@
         if (window.pageYOffset >= sticky) {
           sliderdiv.classList.add("_sticky");
           document.getElementById("searchResult").style.display = "none";
+          document.querySelector(
+            ".main__container"
+          ).style.marginBlockStart = `${
+            sliderdiv
+              .querySelector(".search_main_content")
+              .getBoundingClientRect().height * 3
+          }px`;
         } else {
+          document.querySelector(".main__container").removeAttribute("style");
           sliderdiv.classList.remove("_sticky");
         }
       }

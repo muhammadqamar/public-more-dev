@@ -1,5 +1,8 @@
 <div data-holy>
-  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <script
+    src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"
+    async
+  ></script>
 
   <style>
     @import "./scss/style.scss";
@@ -28,7 +31,13 @@
       if (window.pageYOffset >= sticky) {
         sliderdiv.classList.add("_sticky");
         document.getElementById("searchResult").style.display = "none";
+        document.querySelector(".main__container").style.marginBlockStart = `${
+          sliderdiv
+            .querySelector(".search_main_content")
+            .getBoundingClientRect().height * 3
+        }px`;
       } else {
+        document.querySelector(".main__container").removeAttribute("style");
         sliderdiv.classList.remove("_sticky");
       }
     }
@@ -37,6 +46,7 @@
     function closeSearch() {
       document.getElementById("searchResult").style.display = "none";
     }
+
     function searchResult(e) {
       const DeliveryTab = [
         {
@@ -190,8 +200,6 @@
       box = document.querySelector(".traditions_tabs_flex_box_mob");
       width = box.clientWidth;
 
-      console.log("width", width);
-
       if (width <= 1200) {
         mobiletab = document.getElementsByClassName("mobileTab");
         for (i = 0; i < mobiletab.length; i++) {
@@ -203,7 +211,8 @@
           tabcontent[i].style.display = "none";
         }
       }
-      tablinks = document.getElementsByClassName("__not_active");
+      tablinks = document.querySelectorAll(".tradition_section .__not_active");
+      console.log(tablinks);
       for (i = 0; i < tablinks.length; i++) {
         tablinks[i].className = tablinks[i].className.replace(" __active", "");
       }
@@ -231,8 +240,7 @@
         }
       }
 
-      tablinks = document.getElementsByClassName("__not_active");
-
+      tablinks = document.querySelectorAll(".payent_section .__not_active");
       for (i = 0; i < tablinks.length; i++) {
         tablinks[i].className = tablinks[i].className.replace(" __active", "");
       }
@@ -259,7 +267,7 @@
           tabcontent[i].style.display = "none";
         }
       }
-      tablinks = document.getElementsByClassName("__not_active");
+      tablinks = document.querySelectorAll(".suppert_section .__not_active");
       for (i = 0; i < tablinks.length; i++) {
         tablinks[i].className = tablinks[i].className.replace(" __active", "");
       }
@@ -288,7 +296,9 @@
         }
       }
 
-      tablinks = document.getElementsByClassName("__not_active");
+      tablinks = document.querySelectorAll(
+        ".more-and-more_section .__not_active"
+      );
       for (i = 0; i < tablinks.length; i++) {
         tablinks[i].className = tablinks[i].className.replace(" __active", "");
       }
