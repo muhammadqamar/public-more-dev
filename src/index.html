@@ -22,14 +22,14 @@
     <script>
       // slider
 
-      window.onscroll = function () {
-        stickySlider();
-      };
+      window.addEventListener("scroll", stickySlider);
 
+      var mediaQuery = window.matchMedia("(max-width: 936px)");
       var sliderdiv = document.getElementById("searchSlider");
       var sticky = sliderdiv.offsetTop;
 
       function stickySlider() {
+        if (!mediaQuery.matches) return;
         if (window.pageYOffset >= sticky) {
           sliderdiv.classList.add("_sticky");
           document.getElementById("searchResult").style.display = "none";
@@ -40,10 +40,10 @@
               .querySelector(".search_main_content")
               .getBoundingClientRect().height * 3
           }px`;
-        } else {
-          document.querySelector(".main__container").removeAttribute("style");
-          sliderdiv.classList.remove("_sticky");
+          return;
         }
+        document.querySelector(".main__container").removeAttribute("style");
+        sliderdiv.classList.remove("_sticky");
       }
 
       // traditions Tabs
