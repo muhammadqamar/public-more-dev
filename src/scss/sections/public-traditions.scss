@@ -264,6 +264,24 @@
             margin: 0 0 13px;
             color: #000000;
 
+            &._no-bold {
+              font-family: var(
+                --font-family-regular,
+                "ZonaPro-Regular",
+                "Open Sans",
+                sans-serif
+              );
+
+              & > span {
+                font-family: var(
+                  --font-family-bold,
+                  "ZonaPro-Bold",
+                  "Open Sans",
+                  sans-serif
+                );
+              }
+            }
+
             & > span {
               font-family: var(
                 --font-family-regular,
