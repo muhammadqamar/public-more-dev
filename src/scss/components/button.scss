@@ -10,7 +10,18 @@
   border-radius: 105px;
   position: relative;
   font-size: clamp(16px, 2.5vw, 22px);
-  font-weight: 600;
+  font-family: var(
+    --font-family-semi,
+    "ZonaPro-SemiBold",
+    "Open Sans",
+    sans-serif
+  );
+  font-family: var(
+    --font-family-semi,
+    "ZonaPro-SemiBold",
+    "Open Sans",
+    sans-serif
+  );
   line-height: 29px;
   color: #ffffff;
 

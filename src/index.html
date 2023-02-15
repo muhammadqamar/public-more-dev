@@ -21,7 +21,6 @@
     </div>
     <script>
       // slider
-
       window.addEventListener("scroll", stickySlider);
 
       var mediaQuery = window.matchMedia("(max-width: 936px)");
@@ -52,32 +51,32 @@
       }
 
       function searchResult(e) {
-        const DeliveryTab = [
+        var DeliveryTab = [
           {
             link: "#NextDayDelivery",
             heading: "Next Day Delivery",
-            text: "Παράδοση παραγγελίας την επόμενη μέρα",
+            text: "Παράλαβε στην πόρτα σου την επόμενη μέρα!",
             icon: "https://public-more-dev.netlify.app/flex-delivery-tab-img-1.9833ece7.png",
             includeText: true,
           },
           {
             link: "#FlexDelivery",
             heading: "Flex Delivery",
-            text: "Ευελιξία 30 ημερών για παράδοση όποτε θες!",
+            text: "Επίλεξε ημερομηνία παράδοσης στο χώρο σου για 30 μέρες!",
             icon: "https://public-more-dev.netlify.app/flex-delivery-tab-img-2.bf285fb8.png",
             includeText: true,
           },
           {
             link: "#lockerpickup",
             heading: "lockerpickup",
-            text: "Παράλαβε Public όποτε θες από 1.200 BOX NOW lockers!",
+            text: "Παράλαβε όποτε θες από 1.200 BOX NOW lockers πανελλαδικά!",
             icon: "https://public-more-dev.netlify.app/flex-delivery-tab-img-3.32eb0c24.png",
             includeText: true,
           },
           {
             link: "#expresspickup",
             heading: "expresspickup",
-            text: "Παραλαβή online παραγγελίας σε 60'	",
+            text: "Παράλαβε από το αγαπημένο σου κατάστημα σε 60'!",
             icon: "https://public-more-dev.netlify.app/flex-delivery-tab-img-4.a2bf3cf2.png",
             includeText: true,
           },
@@ -90,51 +89,51 @@
           {
             link: "#klarna",
             heading: "klarna",
-            text: "Πληρωμή σε 3 άτοκες δόσεις, χωρίς πιστωτική",
+            text: "Εξόφλησε σε 3 άτοκες δόσεις, χωρίς πιστωτική!",
             icon: "https://public-more-dev.netlify.app/klarna-icon.67106c8b.png",
           },
           {
             link: "#paypal",
             heading: "paypal",
-            text: "Εύκολα και γρήγορα με PayPal!",
+            text: "Πλήρωσε online με ένα click, χωρίς κάρτα!",
             icon: "https://public-more-dev.netlify.app/paypal-icon.922278ab.png",
           },
           {
             link: "#iris",
             heading: "iris",
-            text: "Χωρίς κάρτα, με τον λογαριασμό σου!",
+            text: "Πλήρωσε απευθείας από το λογαριασμό σου, χωρίς κάρτα!",
             icon: "https://public-more-dev.netlify.app/iris.43fff485.png",
           },
           {
             link: "#safetynet",
             heading: "safetynet",
-            text: "Υπηρεσία προστασίας συσκευής ",
+            text: "Επεκτείνουμε την εγγύηση των νέων σου συσκευών για 5 χρόνια!",
             icon: "https://public-more-dev.netlify.app/safetynet.014ae1c5.png",
           },
           {
             link: "#iRepair",
             heading: "iRepair",
-            text: "Επισκευές και υποστήριξη για συσκευές τεχνολογίας",
+            text: "Επισκευάζουμε άμεσα και αξιόπιστα τη συσκευή σου, με την εγγύηση της iRepair!",
             icon: "https://public-more-dev.netlify.app/iRepair.02f6ada5.png",
           },
           {
             link: "#publicBusiness",
             heading: "publicbusiness",
-            text: "Η all-in-one λύση για επαγγελματίες και επιχειρήσεις",
+            text: "Απολαύστε την all-in-one λύση για την επιχείρησή σας!",
             icon: "https://public-more-dev.netlify.app/PB-icon-1.f5a8e830.svg",
             includeText: true,
           },
           {
             link: "#bookFriends",
             heading: "bookfriends",
-            text: "Διαβάζουμε και σου προτείνουμε!",
+            text: "Αναζήτησε κριτικές βιβλίων & προτάσεις για τη βιβλιοθήκη σου!",
             icon: "https://public-more-dev.netlify.app/PB-icon-2.cdd1ecc5.svg",
             includeText: true,
           },
           {
             link: "#tickets",
             heading: "Tickets",
-            text: "Το εισιτήριo στις πιο δυνατές σου στιγμές!",
+            text: "Κλείσε το εισιτήριό σου στις πιο δυνατές σου στιγμές!",
             icon: "https://public-more-dev.netlify.app/PB-icon-3.00e4940a.svg",
             includeText: true,
           },
@@ -162,14 +161,14 @@
           {
             link: "#refurbished",
             heading: "Refurbished",
-            text: "Refurbished προϊόντα με εγγύηση ποιότητας Ήρθαν οι Ανακατασκευασμένες συσκευές second go",
+            text: "Refurbished προϊόντα με εγγύηση ποιότητας Επίλεξε μία ανακατασκευασμένη συσκευή και απόλαυσε 50% εξοικονόμηση χρημάτων και έως 12 μήνες εγγύηση!",
             icon: "",
             includeText: true,
           },
         ];
-        const searchDev = document.getElementById("searchResult");
+        var searchDev = document.getElementById("searchResult");
 
-        const searchData = DeliveryTab.filter((data) => {
+        var searchData = DeliveryTab.filter((data) => {
           return (
             data.heading?.toLowerCase().includes(e.value?.toLowerCase()) ||
             data.text?.toLowerCase().includes(e.value?.toLowerCase())
@@ -251,10 +250,7 @@
 
         tablinks = document.querySelectorAll(".payent_section .__not_active");
         for (i = 0; i < tablinks.length; i++) {
-          tablinks[i].className = tablinks[i].className.replace(
-            " __active",
-            ""
-          );
+          tablinks[i].className = tablinks[i].className.replace("__active", "");
         }
         document.getElementById(tabName).style.display = "block";
         document.getElementById(disTab).style.display = "block";
@@ -325,6 +321,8 @@
         document.getElementById(disTab).style.display = "block";
         evt.currentTarget.className += " __active";
       }
+
+      console.log(openTraditionsTab);
     </script>
   </div>
 </module>

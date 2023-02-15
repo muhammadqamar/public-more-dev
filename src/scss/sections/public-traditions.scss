@@ -61,7 +61,12 @@
       }
 
       .label {
-        font-weight: 800;
+        font-family: var(
+          --font-family-bold,
+          "ZonaPro-Bold",
+          "Open Sans",
+          sans-serif
+        );
         font-size: clamp(20px, 4vw, 32px);
         line-height: 30px;
         letter-spacing: 0.02em;
@@ -69,7 +74,12 @@
       }
     }
     .label_heading {
-      font-weight: 400;
+      font-family: var(
+        --font-family-regular,
+        "ZonaPro-Regular",
+        "Open Sans",
+        sans-serif
+      );
       font-size: clamp(32px, 5vw, 48px);
       line-height: clamp(44px, 5vw, 64px);
       letter-spacing: -0.01em;
@@ -89,7 +99,12 @@
       }
 
       & > span {
-        font-weight: bold;
+        font-family: var(
+          --font-family-bold,
+          "ZonaPro-Bold",
+          "Open Sans",
+          sans-serif
+        );
       }
 
       & > ._more {
@@ -239,13 +254,23 @@
 
           .tab_heading {
             font-size: 24px;
-            font-weight: 600;
+            font-family: var(
+              --font-family-semi,
+              "ZonaPro-SemiBold",
+              "Open Sans",
+              sans-serif
+            );
             line-height: 28px;
             margin: 0 0 13px;
             color: #000000;
 
             & > span {
-              font-weight: 400;
+              font-family: var(
+                --font-family-regular,
+                "ZonaPro-Regular",
+                "Open Sans",
+                sans-serif
+              );
             }
           }
           .tab_headin_img {

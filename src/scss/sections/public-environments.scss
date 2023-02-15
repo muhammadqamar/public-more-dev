@@ -5,7 +5,12 @@
 
   .rnvironments_heading {
     max-width: 1097px;
-    font-weight: 400;
+    font-family: var(
+      --font-family-regular,
+      "ZonaPro-Regular",
+      "Open Sans",
+      sans-serif
+    );
     font-size: clamp(32px, 5vw, 48px);
     line-height: clamp(40px, 5vw, 56px);
     text-align: center;
@@ -18,7 +23,12 @@
     }
 
     & > span {
-      font-weight: 600;
+      font-family: var(
+        --font-family-semi,
+        "ZonaPro-SemiBold",
+        "Open Sans",
+        sans-serif
+      );
     }
   }
 

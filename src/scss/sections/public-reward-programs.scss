@@ -76,7 +76,12 @@
       }
 
       .club_heading {
-        font-weight: 800;
+        font-family: var(
+          --font-family-bold,
+          "ZonaPro-Bold",
+          "Open Sans",
+          sans-serif
+        );
         font-size: clamp(32px, 4vw, 62px);
         line-height: 90%;
         letter-spacing: -0.01em;
@@ -91,7 +96,12 @@
       .club_link {
         width: max-content;
         height: auto;
-        font-weight: 700;
+        font-family: var(
+          --font-family-bold,
+          "ZonaPro-Bold",
+          "Open Sans",
+          sans-serif
+        );
         font-size: clamp(16px, 2vw, 24px);
         line-height: 28px;
         letter-spacing: 0.01em;

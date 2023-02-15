@@ -57,11 +57,17 @@
       line-height: clamp(28px, 4vw, 40px);
       letter-spacing: 0.03em;
       color: #ffffff;
-      margin: 0 0 24px;
+      margin: 24px 0 0;
     }
+
     .hero_sub_heading {
       width: min(99%, 835px);
-      font-weight: 800;
+      font-family: var(
+        --font-family-bold,
+        "ZonaPro-Bold",
+        "Open Sans",
+        sans-serif
+      );
       font-size: clamp(32px, 8.5vw, 64px);
       line-height: clamp(40px, 12vw, 80px);
       letter-spacing: -0.02em;
@@ -231,7 +237,12 @@
 
         .search_input {
           width: 100%;
-          font-weight: 400;
+          font-family: var(
+            --font-family-regular,
+            "ZonaPro-Regular",
+            "Open Sans",
+            sans-serif
+          );
           font-size: clamp(16px, 3vw, 24px);
           line-height: clamp(16px, 3vw, 40px);
           text-align: left;
@@ -356,7 +367,12 @@
             }
 
             .item_name {
-              font-weight: 800;
+              font-family: var(
+                --font-family-bold,
+                "ZonaPro-Bold",
+                "Open Sans",
+                sans-serif
+              );
               font-size: clamp(20px, 2vw, 24px);
               line-height: 40px;
               letter-spacing: 0.03em;
@@ -397,7 +413,12 @@
     }
   }
   .search_heading {
-    font-weight: 800;
+    font-family: var(
+      --font-family-bold,
+      "ZonaPro-Bold",
+      "Open Sans",
+      sans-serif
+    );
     font-size: 24px;
     line-height: 40px;
     letter-spacing: 0.03em;
@@ -416,7 +437,12 @@
   text-align: center;
 
   .not_search_heading {
-    font-weight: 800;
+    font-family: var(
+      --font-family-bold,
+      "ZonaPro-Bold",
+      "Open Sans",
+      sans-serif
+    );
     font-size: 16px;
     line-height: 22px;
     text-align: center;
@@ -425,7 +451,12 @@
     margin: 0 0 16px;
   }
   .not_search_para {
-    font-weight: 400;
+    font-family: var(
+      --font-family-regular,
+      "ZonaPro-Regular",
+      "Open Sans",
+      sans-serif
+    );
     font-size: 14px;
     line-height: 19px;
     text-align: center;

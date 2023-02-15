@@ -7,7 +7,12 @@
   font-size: 1rem;
   line-height: 1.5;
   font-style: normal;
-  font-family: var(--font-family-regular);
+  font-family: var(
+    --font-family-regular,
+    "ZonaPro-Regular",
+    "Open Sans",
+    sans-serif
+  );
 
   @import "./reset";
   @import "./external";
