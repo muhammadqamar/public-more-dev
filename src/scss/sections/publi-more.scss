@@ -311,6 +311,7 @@
             display: flex;
             align-items: center;
             flex-shrink: 0;
+            // flex-grow: 1;
           }
 
           &:hover {
@@ -329,10 +330,15 @@
             width: 100%;
             height: auto;
             background: #eeeeee;
+            aspect-ratio: 560 / 410;
 
             @media (max-width: 936px) {
               width: clamp(72px, 24vw, 205px);
-              border-radius: 8px;
+              flex-shrink: 0;
+              // border-radius: 8px;
+              // height: 100%;
+              // flex-basis: 30%;
+              // position: relative;
             }
 
             .public_item_img {
@@ -359,11 +365,19 @@
           .item_name_box {
             width: 100%;
             height: auto;
-            padding: 13px 24px 17px;
+            min-height: 7rem;
+            padding: 0.75rem 1.5rem;
+            display: flex;
+            align-items: center;
+
+            @media (max-width: 936px) {
+              flex-grow: 1;
+              min-height: unset;
+            }
 
             @media (max-width: 768px) {
               width: max-content;
-              padding: 6px 16px;
+              padding: 0.5rem 1rem;
             }
 
             .item_name {
@@ -374,7 +388,7 @@
                 sans-serif
               );
               font-size: clamp(20px, 2vw, 24px);
-              line-height: 40px;
+              line-height: 1.125;
               letter-spacing: 0.03em;
               color: #000000;
               margin: 0;

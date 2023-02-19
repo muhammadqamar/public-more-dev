@@ -1,0 +1,36 @@
+@use "sass:color" as c;
+@use "../functions" as *;
+@use "../helpers" as *;
+
+.section--payments {
+	padding-block-start: fluid-rem(1rem, 5rem);
+	// overflow: visible;
+	// background: url("../images/decoration-arrow.svg") no-repeat top right
+	// 	min(2vw, 2rem) / max(12rem, 20%) auto;
+	position: relative;
+
+	&::after {
+		content: "";
+		position: absolute;
+		width: max(20rem, 30%);
+		height: auto;
+		aspect-ratio: 484 / 332;
+		top: 0;
+		right: 0;
+		left: unset;
+		background: url("../images/decoration-arrow.svg") no-repeat center /
+			100% auto;
+		transform: translate(calc(-1 * min(2vw, 2rem)), -40%);
+		z-index: -2;
+		pointer-events: none;
+
+		@media (width < 960px) {
+			width: max(17rem, 30%);
+			transform: translate(calc(-1 * min(2vw, 2rem)), -100%);
+		}
+	}
+
+	&::before {
+		content: none;
+	}
+}

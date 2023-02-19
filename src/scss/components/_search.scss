@@ -1,0 +1,119 @@
+@use "sass:color" as c;
+@use "../functions" as *;
+@use "../helpers" as *;
+@use "../mixins" as *;
+@use "../typography" as *;
+
+.searchform {
+	--glass-padding: 0.35rem;
+	--glass-border: 1rem;
+	position: relative;
+	z-index: 3;
+	padding: var(--glass-padding);
+	display: inline-grid;
+	gap: 0;
+	border-radius: var(--glass-border);
+	margin-block-end: 2rem;
+	width: calc(50% - var(--glass-padding));
+	background-color: c.adjust(c("black"), $alpha: -0.8);
+	-webkit-backdrop-filter: blur(20px);
+	backdrop-filter: blur(20px);
+
+	&__input,
+	&__submit {
+		grid-area: 1 / -1;
+		border-radius: calc(var(--glass-border) - var(--glass-padding));
+	}
+
+	&__input {
+		min-height: 3.5rem;
+		border: 0;
+		background-color: v("white");
+		padding-inline: 0.5rem;
+		min-inline-size: 0;
+		inline-size: 100%;
+		font: inherit;
+		font-size: 1.5rem;
+	}
+
+	&__submit {
+		@include size(3.5rem, 3rem);
+		justify-self: end;
+		border: 0;
+		cursor: pointer;
+		background-color: v("deliveries");
+		color: v("white");
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		align-self: center;
+		margin-inline-end: 0.25rem;
+
+		svg {
+			@include size(1.5rem);
+		}
+	}
+
+	&__results {
+		display: block;
+		position: absolute;
+		top: calc(100% + 0.25rem);
+		left: 0;
+		height: auto;
+		background-color: c.adjust(c("black"), $alpha: -0.8);
+		-webkit-backdrop-filter: blur(20px);
+		backdrop-filter: blur(20px);
+		padding: var(--glass-padding);
+		z-index: 1000;
+		border-radius: var(--glass-border);
+
+		&[aria-hidden="true"] {
+			display: none;
+		}
+
+		&-list {
+			margin: 0;
+			padding: fluid-rem(1.25rem, 2rem);
+			background-color: v("white");
+			border-radius: calc(var(--glass-border) - var(--glass-padding));
+			display: grid;
+			gap: 0.75rem;
+
+			li {
+				&:not(.empty) {
+					@extend %bold;
+					font-size: 1.25rem;
+					border-radius: calc(
+						var(--glass-border) - var(--glass-padding)
+					);
+
+					&:hover {
+						background-color: v("off-white");
+					}
+
+					a {
+						display: block;
+						padding: 0.25rem 0.5rem;
+					}
+				}
+
+				&.empty {
+					strong {
+						@extend %bold;
+						color: v("black");
+					}
+
+					p {
+						font-size: 0.75rem;
+						text-align: center;
+						color: c.adjust(c("black"), $alpha: -0.35);
+
+						&:not(:first-child) {
+							margin-top: 1em;
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,91 @@
+<section class="section section--hero">
+	<div id="holy-anim"></div>
+	<header class="section__header">
+		<img src="./images/public-more-logo.svg" alt="" class="more-logo" />
+		<h2 class="section__title">Είμαστε εδώ για να διευκολύνουμε κάθε σου στιγμή!</h2>
+		<p class="section__subtitle">
+			Με υπηρεσίες και εμπειρίες για κάθε σου ανάγκη, στα Public ζεις πάντα κάτι παραπάνω από μία αγορά.
+		</p>
+	</header>
+	<aside class="search">
+		<form class="searchform">
+			<input
+				class="searchform__input"
+				type="search"
+				name="search"
+				id="page-search"
+				@keyup="searchPage"
+				v-model="searchValue"
+				placeholder="Aναζήτηση"
+				autocomplete="off"
+			/>
+			<button class="searchform__submit">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+					<path
+						fill-rule="evenodd"
+						d="M11 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm0 2a10 10 0 1 0 0-20 10 10 0 0 0 0 20Z"
+						clip-rule="evenodd"
+					/>
+					<path fill-rule="evenodd" d="m22.3 22.7-5-5 1.4-1.4 5 5-1.4 1.4Z" clip-rule="evenodd" />
+				</svg>
+			</button>
+			<div class="searchform__results" :aria-hidden="searchValue === ''">
+				<ul class="searchform__results-list">
+					<li class="emtpy">
+						<p><strong>Εδώ μπορείς να βρεις υπηρεσίες της Public.</strong></p>
+						<p>
+							Αν δεν βρήκες αυτό που ψάχνει, χρησιμοποίησε την βασική αναζήτηση της ιστοσελίδας που γράφει
+							"Ψάχνω για..."
+						</p>
+					</li>
+				</ul>
+			</div>
+		</form>
+		<ul class="categories">
+			<!-- prettier-ignore -->
+			<include src="components/category.html">
+        {
+          "name": "Πληρωμές",
+          "id": "payments",
+          "image": {
+            "default": "./images/category-payments.jpg",
+            "hover": "./images/category-payments_hover.jpg"
+          }
+        }
+      </include>
+			<!-- prettier-ignore -->
+			<include src="components/category.html">
+        {
+          "name": "Παραδόσεις",
+          "id": "deliveries",
+          "image": {
+            "default": "./images/category-deliveries.jpg",
+            "hover": "./images/category-deliveries_hover.jpg"
+          }
+        }
+      </include>
+			<!-- prettier-ignore -->
+			<include src="components/category.html">
+        {
+          "name": "Προστασία & Express Επισκευή",
+          "id": "support",
+          "image": {
+            "default": "./images/category-support.jpg",
+            "hover": "./images/category-support_hover.jpg"
+          }
+        }
+      </include>
+			<!-- prettier-ignore -->
+			<include src="components/category.html">
+        {
+          "name": "More & More!",
+          "id": "more",
+          "image": {
+            "default": "./images/category-more.jpg",
+            "hover": "./images/category-more_hover.jpg"
+          }
+        }
+      </include>
+		</ul>
+	</aside>
+</section>

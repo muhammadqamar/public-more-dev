@@ -1,42 +1,363 @@
 <!DOCTYPE html>
 <html lang="el">
-  <module href="./public-head.html"></module>
-  <body class="mdc-typography">
-    <app-root _nghost-pbc-c24="" ng-version="13.2.7">
-      <div _ngcontent-pbc-c24="" class="position-relative">
-        <css-defer></css-defer>
-        <!---->
-        <app-modal _ngcontent-pbc-c24="" _nghost-pbc-c15=""><!----></app-modal>
-        <!----><!---->
-        <section _ngcontent-pbc-c24=""><!----></section>
-        <!---->
-        <div id="mainContainer">
-          <router-outlet _ngcontent-pbc-c24=""></router-outlet>
-          <corporate _nghost-pbc-c45="">
-            <div class="container">
-              <!---->
-              <main _ngcontent-pbc-c45="">
-                <div _ngcontent-pbc-c45="" class="container">
-                  <!-- <section _ngcontent-pbc-c45="">
-                         <header _ngcontent-pbc-c45="">
-                           <div _ngcontent-pbc-c45="" class="row row-small justify-content-between align-items-center flex-column flex-sm-row">
-                               <div _ngcontent-pbc-c45="" class="col col-auto"><h1 _ngcontent-pbc-c45="" class="mdc-typography--headline5">{{title}}</h1></div>
-                            </div>
-                         </header>
-                       </section> -->
-                  <!----><!---->
-                  <article _ngcontent-pbc-c45="" id="articlePage" class="page">
-                    <content></content>
-                  </article>
-                  <!---->
-                </div>
-              </main>
-            </div>
-          </corporate>
-          <!---->
-        </div>
-        <!----><!---->
-      </div>
-    </app-root>
-  </body>
+	<module href="./public-head.html"></module>
+	<body class="mdc-typography">
+		<app-root _nghost-pbc-c24="" ng-version="13.2.7">
+			<div _ngcontent-pbc-c24="" class="position-relative">
+				<header-top _ngcontent-pbc-c25="" _nghost-pbc-c17="">
+					<header
+						_ngcontent-pbc-c17=""
+						class="mdc-top-app-bar mdc-top-app-bar--dark mdc-top-app-bar--dense printHide"
+					>
+						<div _ngcontent-pbc-c17="" class="mdc-top-app-bar__row">
+							<section
+								_ngcontent-pbc-c17=""
+								class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end"
+							>
+								<div
+									_ngcontent-pbc-c17=""
+									class="row flex-nowrap row-xs-scroll row-small align-items-center justify-content-start justify-content-sm-end"
+								>
+									<div _ngcontent-pbc-c17="" class="col col-auto">
+										<app-mdc-link-button
+											_ngcontent-pbc-c17=""
+											label="Εξέλιξη παραγγελίας"
+											size="small"
+											color="white"
+											_nghost-pbc-c16=""
+										>
+											<span
+												_ngcontent-pbc-c16=""
+												class="mdc-link-button animate mdc-link-button--white mdc-link-button--small text-left"
+												><span _ngcontent-pbc-c16="" class="mdc-link-button__label">
+													Εξέλιξη παραγγελίας
+												</span></span
+											>
+										</app-mdc-link-button>
+									</div>
+									<div _ngcontent-pbc-c17="" class="col col-auto">
+										<div _ngcontent-pbc-c17="" class="dot"></div>
+									</div>
+									<div _ngcontent-pbc-c17="" class="col col-auto">
+										<app-mdc-link-button
+											_ngcontent-pbc-c17=""
+											size="small"
+											color="white"
+											_nghost-pbc-c16=""
+										>
+											<a
+												_ngcontent-pbc-c16=""
+												type="button"
+												class="mdc-link-button animate mdc-link-button--white mdc-link-button--small text-left"
+												href="tel:210 81 81 333"
+												><span _ngcontent-pbc-c16="" class="mdc-link-button__label">
+													Τηλ. 210 81 81 333
+												</span></a
+											>
+										</app-mdc-link-button>
+									</div>
+									<div _ngcontent-pbc-c17="" class="col col-auto">
+										<div _ngcontent-pbc-c17="" class="dot"></div>
+									</div>
+									<div _ngcontent-pbc-c17="" class="col col-auto">
+										<app-mdc-link-button
+											_ngcontent-pbc-c17=""
+											label="Επικοινωνία"
+											size="small"
+											color="white"
+											_nghost-pbc-c16=""
+										>
+											<a
+												_ngcontent-pbc-c16=""
+												type="button"
+												class="mdc-link-button animate mdc-link-button--white mdc-link-button--small text-left"
+												href="/help/contact-us"
+												><span _ngcontent-pbc-c16="" class="mdc-link-button__label">
+													Επικοινωνία
+												</span></a
+											>
+										</app-mdc-link-button>
+									</div>
+									<div _ngcontent-pbc-c17="" class="col col-auto">
+										<div _ngcontent-pbc-c17="" class="dot"></div>
+									</div>
+									<div _ngcontent-pbc-c17="" class="col col-auto">
+										<app-mdc-link-button
+											_ngcontent-pbc-c17=""
+											size="small"
+											color="white"
+											_nghost-pbc-c16=""
+										>
+											<a
+												_ngcontent-pbc-c16=""
+												type="button"
+												class="mdc-link-button animate mdc-link-button--white mdc-link-button--small text-left"
+												href="/store-locator"
+												><span _ngcontent-pbc-c16="" class="mdc-link-button__label">
+													58 καταστήματα
+												</span></a
+											>
+										</app-mdc-link-button>
+									</div>
+								</div>
+							</section>
+						</div>
+					</header>
+				</header-top>
+				<app-header _ngcontent-pbc-c25="" _nghost-pbc-c22="">
+					<header
+						_ngcontent-pbc-c22=""
+						id="header"
+						class="mdc-top-app-bar mdc-top-app-bar--header mdc-top-app-bar--sticky printHide"
+					>
+						<div _ngcontent-pbc-c22="" class="mdc-top-app-bar__row">
+							<section
+								_ngcontent-pbc-c22=""
+								class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start"
+							>
+								<app-mdc-icon-button _ngcontent-pbc-c22="" icon="menu" _nghost-pbc-c18="">
+									<button
+										_ngcontent-pbc-c18=""
+										tabindex="-1"
+										class="mdc-icon-button animate mdc-icon-button--primary mdc-icon-button--large"
+										type="button"
+										title="menu"
+										aria-label="menu"
+									>
+										<span _ngcontent-pbc-c18="" class="mdc-icon-button__icon ic-menu"></span>
+									</button>
+								</app-mdc-icon-button>
+								<a
+									_ngcontent-pbc-c22=""
+									href="/"
+									routerlink="/"
+									aria-label="home"
+									class="mdc-button mdc-button--logo"
+									><span _ngcontent-pbc-c22="" class="mdc-button__ripple"></span
+									><img
+										_ngcontent-pbc-c22=""
+										src="https://www.public.gr/assets/images/img-logo.svg"
+										width="141"
+										height="50"
+										alt="public"
+								/></a>
+							</section>
+							<section
+								_ngcontent-pbc-c22=""
+								class="mdc-top-app-bar__section mdc-top-app-bar__section--align-center mdc-top-app-bar__section--search d-none d-md-flex"
+							>
+								<div _ngcontent-pbc-c22="" class="mdc-menu-surface--anchor">
+									<div
+										_ngcontent-pbc-c22=""
+										id="field-search"
+										class="mdc-text-field mdc-text-field--search text-field mdc-text-field--outlined mdc-text-field--with-trailing-icon"
+									>
+										<input
+											_ngcontent-pbc-c22=""
+											id="search"
+											autocomplete="off"
+											type="text"
+											placeholder="Ψάχνω για…"
+											class="mdc-text-field__input"
+										/><label _ngcontent-pbc-c22="" for="search"></label>
+										<span
+											_ngcontent-pbc-c22=""
+											class="mdc-text-field__icon mdc-text-field__icon--button"
+										>
+											<app-mdc-icon-button
+												_ngcontent-pbc-c22=""
+												size="small"
+												icon="mic"
+												_nghost-pbc-c18=""
+											>
+												<button
+													_ngcontent-pbc-c18=""
+													tabindex="-1"
+													class="mdc-icon-button animate mdc-icon-button--tertiary mdc-icon-button--small"
+													type="button"
+													title="mic"
+													aria-label="mic"
+												>
+													<span
+														_ngcontent-pbc-c18=""
+														class="mdc-icon-button__icon ic-mic"
+													></span>
+												</button>
+											</app-mdc-icon-button>
+										</span>
+
+										<span
+											_ngcontent-pbc-c22=""
+											class="mdc-text-field__icon mdc-text-field__icon--button"
+										>
+											<app-mdc-icon-button _ngcontent-pbc-c22="" icon="search" _nghost-pbc-c18="">
+												<button
+													_ngcontent-pbc-c18=""
+													tabindex="-1"
+													class="mdc-icon-button animate mdc-icon-button--primary mdc-icon-button--large"
+													type="button"
+													title="search"
+													aria-label="search"
+												>
+													<span
+														_ngcontent-pbc-c18=""
+														class="mdc-icon-button__icon ic-search"
+													></span>
+												</button>
+											</app-mdc-icon-button>
+										</span>
+										<div
+											_ngcontent-pbc-c22=""
+											class="mdc-notched-outline mdc-notched-outline--upgraded"
+										>
+											<div _ngcontent-pbc-c22="" class="mdc-notched-outline__leading"></div>
+											<div _ngcontent-pbc-c22="" class="mdc-notched-outline__notch"></div>
+											<div _ngcontent-pbc-c22="" class="mdc-notched-outline__trailing"></div>
+										</div>
+									</div>
+									<div
+										_ngcontent-pbc-c22=""
+										id="menu-search"
+										class="mdc-menu mdc-menu-surface mdc-menu--search mt-2 d-none"
+									></div>
+									<div
+										_ngcontent-pbc-c22=""
+										id="past-searches"
+										class="mdc-menu mdc-menu-surface mdc-menu--previous-search mt-2"
+									></div>
+								</div>
+							</section>
+							<section
+								_ngcontent-pbc-c22=""
+								class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end"
+							>
+								<div
+									_ngcontent-pbc-c22=""
+									class="row no-gutters align-items-center justify-content-end"
+								>
+									<div
+										_ngcontent-pbc-c22=""
+										class="col col-auto d-flex d-md-none adjust-small-screen"
+									>
+										<div _ngcontent-pbc-c22="" class="mdc-menu-surface--anchor">
+											<app-mdc-icon-button _ngcontent-pbc-c22="" icon="search" _nghost-pbc-c18="">
+												<button
+													_ngcontent-pbc-c18=""
+													tabindex="-1"
+													class="mdc-icon-button animate mdc-icon-button--primary mdc-icon-button--large"
+													type="button"
+													title="search"
+													aria-label="search"
+												>
+													<span
+														_ngcontent-pbc-c18=""
+														class="mdc-icon-button__icon ic-search"
+													></span>
+												</button>
+											</app-mdc-icon-button>
+										</div>
+									</div>
+									<div _ngcontent-pbc-c22="" class="col col-auto d-flex adjust-small-screen">
+										<div _ngcontent-pbc-c22="" class="mdc-menu-surface--anchor">
+											<app-mdc-icon-button
+												_ngcontent-pbc-c22=""
+												class="d-flex"
+												_nghost-pbc-c18=""
+											>
+												<button
+													_ngcontent-pbc-c18=""
+													tabindex="-1"
+													class="mdc-icon-button animate mdc-icon-button--primary mdc-icon-button--large"
+													type="button"
+													title="user"
+													aria-label="user"
+												>
+													<span
+														_ngcontent-pbc-c18=""
+														class="mdc-icon-button__icon ic-user"
+													></span>
+												</button>
+											</app-mdc-icon-button>
+										</div>
+									</div>
+
+									<div _ngcontent-pbc-c22="" class="col col-auto d-flex adjust-small-screen">
+										<div _ngcontent-pbc-c22="" class="mdc-badge">
+											<app-mdc-icon-button
+												_ngcontent-pbc-c22=""
+												icon="heart-blank"
+												_nghost-pbc-c18=""
+											>
+												<button
+													_ngcontent-pbc-c18=""
+													tabindex="-1"
+													class="mdc-icon-button animate mdc-icon-button--primary mdc-icon-button--large"
+													type="button"
+													title="heart-blank"
+													aria-label="heart-blank"
+												>
+													<span
+														_ngcontent-pbc-c18=""
+														class="mdc-icon-button__icon ic-heart-blank"
+													></span>
+												</button>
+											</app-mdc-icon-button>
+										</div>
+									</div>
+
+									<div _ngcontent-pbc-c22="" class="col col-auto d-flex adjust-small-screen">
+										<div _ngcontent-pbc-c22="" class="mdc-badge">
+											<app-mdc-icon-button _ngcontent-pbc-c22="" icon="cart" _nghost-pbc-c18="">
+												<button
+													_ngcontent-pbc-c18=""
+													tabindex="-1"
+													class="mdc-icon-button animate mdc-icon-button--primary mdc-icon-button--large"
+													type="button"
+													title="cart"
+													aria-label="cart"
+												>
+													<span
+														_ngcontent-pbc-c18=""
+														class="mdc-icon-button__icon ic-cart"
+													></span>
+												</button>
+											</app-mdc-icon-button>
+										</div>
+									</div>
+								</div>
+							</section>
+						</div>
+						<div _ngcontent-pbc-c22="" class="d-none"></div>
+					</header>
+				</app-header>
+				<div _ngcontent-pbc-c24="" id="mainContainer">
+					<corporate _nghost-pbc-c45="">
+						<div _ngcontent-pbc-c47="" class="container">
+							<main _ngcontent-pbc-c47="">
+								<div _ngcontent-pbc-c47="" class="container">
+									<section _ngcontent-pbc-c47="">
+										<header _ngcontent-pbc-c47="">
+											<div
+												_ngcontent-pbc-c47=""
+												class="row row-small justify-content-between align-items-center flex-column flex-sm-row"
+											>
+												<div _ngcontent-pbc-c47="" class="col col-auto">
+													<h1 _ngcontent-pbc-c47="" class="mdc-typography--headline5">
+														{{title}}
+													</h1>
+												</div>
+											</div>
+										</header>
+									</section>
+									<article _ngcontent-pbc-c47="" id="articlePage" class="page">
+										<content></content>
+									</article>
+								</div>
+							</main>
+						</div>
+					</corporate>
+				</div>
+			</div>
+		</app-root>
+	</body>
 </html>

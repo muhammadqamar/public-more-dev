@@ -1,4 +1,3 @@
-// @forward "./fonts";
 @forward "./variables";
 
 [data-holy] {
@@ -22,7 +21,6 @@
 
   @import "./reset";
   @import "./external";
-  @import "./typography";
-  @import "./sections";
   @import "./components";
+  @import "./sections";
 }

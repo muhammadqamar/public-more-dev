@@ -1,0 +1,117 @@
+<section class="section section--deliveries" id="deliveries">
+	<header class="section__header">
+		<span class="badge badge--deliveries">Παραδόσεις</span>
+		<h3 class="section__title"><b>Παραδίδουμε ό,τι χρειάζεσαι</b> με μεγαλύτερη ευκολία και ευελιξία από ποτέ!</h3>
+	</header>
+	<div class="section__tabs tabs">
+		<div class="tabs-nav">
+			<!-- prettier-ignore -->
+			<include src="components/tab-button.html">
+				{ 
+          "type": "deliveries", 
+          "value": "next-day-delivery", 
+          "icon": "./images/next-day-delivery-icon.svg", 
+          "logo": "./images/next-day-delivery-logo.svg", 
+          "description": { 
+            "desktop": "Παράλαβε στην πόρτα σου την επόμενη μέρα!", 
+            "mobile": "100.000 άμεσα διαθέσιμα προϊόντα έρχονται στην πόρτα σου την επόμενη κιόλας μέρα! Ισχύει μόνο για Αθήνα και Θεσσαλονίκη." 
+          }, 
+          "image": "./images/next-day-delivery-mobile.png", 
+          "linkUrl": "https://www.public.gr/page/next-day-delivery", 
+          "linkLabel": "Μάθε περισσότερα" 
+        }
+			</include>
+			<!-- prettier-ignore -->
+			<include src="components/tab-button.html">
+				{ 
+          "type": "deliveries", 
+          "value": "flex-delivery", 
+          "icon": "./images/flex-delivery-icon.svg", 
+          "logo": "./images/flex-delivery-logo.svg", 
+          "description": { 
+            "desktop": "Επίλεξε ημερομηνία παράδοσης στο χώρο σου για 30 μέρες!", 
+            "mobile": "Αν είσαι στην Αττική και θες περισσότερη ευελιξία, έχεις 30 ημέρες για να επιλέξεις ακριβώς τη μέρα και ώρα που θα παραλάβεις!" 
+          }, 
+          "image": "./images/flex-delivery-mobile.png", 
+          "linkUrl": "https://www.public.gr/page/help/tropoi-apostolis", 
+          "linkLabel": "Μάθε περισσότερα"
+				}
+			</include>
+			<!-- prettier-ignore -->
+			<include src="components/tab-button.html">
+				{ 
+          "type": "deliveries", 
+          "value": "locker-pickup", 
+          "icon": "./images/locker-pickup-icon.svg", 
+          "logo": "./images/locker-pickup-logo.svg", 
+          "description": { 
+            "desktop": "Παράλαβε όποτε θες από 1.200 BOX NOW lockers πανελλαδικά!", 
+            "mobile": "Βρες το κοντινότερο BOX NOW locker σου ανάμεσα σε 1.200 σημεία σε όλη την Ελλάδα, και παράλαβε με 1€ όπου και όποτε θες, χωρίς να κοιτάς το ρολόι!" 
+          }, 
+          "image": "./images/locker-pickup-mobile.png", 
+          "linkUrl": "https://www.public.gr/page/help/ypiresies/locker-pickup", 
+          "linkLabel": "Μάθε περισσότερα"
+				}
+			</include>
+			<!-- prettier-ignore -->
+			<include src="components/tab-button.html">
+				{ 
+          "type": "deliveries", 
+          "value": "expresspickup", 
+          "icon": "./images/expresspickup-icon.svg", 
+          "logo": "./images/expresspickup-logo.svg", 
+          "description": { 
+            "desktop": "Παράλαβε από το αγαπημένο σου κατάστημα σε 60'!", 
+            "mobile": "Παράγγειλε online το αγαπημένο σου προϊόν ανάμεσα σε χιλιάδες επιλογές και παράλαβέ το από ένα κατάστημα" 
+          }, 
+          "image": "./images/expresspickup-mobile.png", 
+          "linkUrl": "https://www.public.gr/page/express-pickup", 
+          "linkLabel": "Μάθε περισσότερα"
+				}
+			</include>
+		</div>
+		<div class="tabs-content">
+			<!-- prettier-ignore -->
+			<include src="components/tab-content.html" >
+        {
+          "type": "deliveries", 
+          "value": "next-day-delivery", 
+          "className": "tab-content--is-not-overlaping",
+          "image": "./images/next-day-delivery-desktop.png", 
+          "linkUrl": "https://www.public.gr/page/next-day-delivery", 
+          "linkLabel": "Μάθε περισσότερα" 
+        }
+      </include>
+			<!-- prettier-ignore -->
+			<include src="components/tab-content.html" >
+        {
+          "type": "deliveries", 
+          "value": "flex-delivery", 
+          "image": "./images/flex-delivery-desktop.png", 
+          "linkUrl": "https://www.public.gr/page/help/tropoi-apostolis", 
+          "linkLabel": "Μάθε περισσότερα"
+        }
+      </include>
+			<!-- prettier-ignore -->
+			<include src="components/tab-content.html" >
+        {
+          "type": "deliveries", 
+          "value": "locker-pickup", 
+          "image": "./images/locker-pickup-desktop.png", 
+          "linkUrl": "https://www.public.gr/page/help/ypiresies/locker-pickup", 
+          "linkLabel": "Μάθε περισσότερα"
+        }
+      </include>
+			<!-- prettier-ignore -->
+			<include src="components/tab-content.html" >
+        {
+          "type": "deliveries", 
+          "value": "expresspickup",
+          "image": "./images/expresspickup-desktop.png", 
+          "linkUrl": "https://www.public.gr/page/express-pickup", 
+          "linkLabel": "Μάθε περισσότερα"
+        }
+      </include>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,7 @@
+@use "sass:color" as c;
+@use "../functions" as *;
+@use "../helpers" as *;
+
+.section--more {
+	padding-block-end: 0;
+}

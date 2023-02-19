@@ -3,6 +3,7 @@
     src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"
     async
   ></script>
+
   <style>
     @import "./scss/style.scss";
   </style>
@@ -210,9 +211,8 @@
         }
       }
       tablinks = document.querySelectorAll(".tradition_section .__not_active");
-      console.log(tablinks);
       for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" __active", "");
+        tablinks[i].className = tablinks[i].className.replace("__active", "");
       }
       document.getElementById(tabName).style.display = "block";
       document.getElementById(disTab).style.display = "block";
@@ -267,7 +267,7 @@
       }
       tablinks = document.querySelectorAll(".suppert_section .__not_active");
       for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" __active", "");
+        tablinks[i].className = tablinks[i].className.replace("__active", "");
       }
       document.getElementById(tabName).style.display = "block";
       document.getElementById(disTab).style.display = "block";
@@ -298,13 +298,11 @@
         ".more-and-more_section .__not_active"
       );
       for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" __active", "");
+        tablinks[i].className = tablinks[i].className.replace("__active", "");
       }
       document.getElementById(tabName).style.display = "block";
       document.getElementById(disTab).style.display = "block";
       evt.currentTarget.className += " __active";
     }
-
-    console.log(openTraditionsTab);
   </script>
 </div>

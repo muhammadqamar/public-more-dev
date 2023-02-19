@@ -1,0 +1,89 @@
+@use "sass:color" as c;
+@use "../functions" as *;
+@use "../helpers" as *;
+@use "../mixins" as *;
+@use "../typography" as *;
+
+.section--rewards {
+	display: grid;
+	align-items: center;
+	grid-template-columns: 1fr min-content 1fr;
+	grid-template-areas: "StudentClub title MyClub";
+	gap: 1rem;
+	justify-content: center;
+
+	@media (width < 960px) {
+		grid-template-columns: 1fr;
+		grid-template-areas: "StudentClub" "title" "MyClub";
+	}
+
+	.section__title {
+		@extend %bold;
+		grid-area: title;
+		font-size: fluid-rem(1.5rem, 2.5rem);
+		line-height: 1.25;
+		text-align: center;
+		justify-self: center;
+		margin: 0;
+	}
+
+	.club {
+		display: grid;
+		color: v("white");
+		overflow: hidden;
+		width: min(25rem, 100%);
+
+		&--student {
+			grid-area: StudentClub;
+			border-radius: 0 50rem 50rem 0;
+		}
+
+		&--my {
+			grid-area: MyClub;
+			border-radius: 50rem 0 0 50rem;
+			justify-self: end;
+
+			.club__title {
+				text-align: right;
+				margin-left: auto;
+			}
+
+			.club__link {
+				svg {
+					order: -1;
+					transform: scaleX(-1);
+				}
+			}
+		}
+
+		&__image,
+		&__title {
+			grid-area: 1 / -1;
+		}
+
+		&__title {
+			@extend %bold;
+			font-size: fluid-rem(1.5rem, 2.5rem);
+			line-height: 1.5;
+			padding: 12.5% 2rem;
+			align-self: end;
+		}
+
+		&__link {
+			font-size: fluid-rem(1rem, 1.25rem);
+			transition: opacity 0.2s linear;
+			display: flex;
+			align-items: center;
+			gap: 0.5em;
+
+			&:hover {
+				opacity: 0.5;
+			}
+
+			svg {
+				@include size(1em);
+				flex: 0 0 1em;
+			}
+		}
+	}
+}

@@ -151,45 +151,46 @@
         border-radius: 10px;
         cursor: pointer;
         width: 376px;
-        min-height: 145px;
+        flex: 1;
+        // min-height: 145px;
         transition: all 0.2s ease-in-out;
-        outline-color: rgba(0, 0, 0, 0.14) !important;
+        outline-color: rgba(0, 0, 0, 0.14);
+        background: #f3f3f3;
+        padding: 1.5rem 2rem 1.5rem 2rem;
+
         @media (max-width: 1200px) {
           width: 100%;
         }
 
-        &.__not_active {
-          background: #f3f3f3;
-          padding: 24px 27px 24px 40px;
+        // &.__not_active {
+        //   background: #f3f3f3;
+        //   padding: 24px 27px 24px 40px;
 
-          @media (max-width: 599px) {
-            padding: 24px 27px;
-          }
+        //   @media (max-width: 599px) {
+        //     padding: 24px 27px;
+        //   }
 
-          @media (max-width: 1200px) {
-            width: 100%;
-          }
-        }
+        //   @media (max-width: 1200px) {
+        //     width: 100%;
+        //   }
+        // }
 
         &.__active {
           background: #ffffff !important;
           // outline: rgba(0, 0, 0, 0.14) solid 2px !important;
-          box-shadow: 0 6px 20px #0000003b, 0 0 0 2px #00000024;
+          box-shadow: 0 0.5rem 1.5rem #0000003b, 0 0 0 2px #00000024;
           // box-shadow: 0px 6px 20px 0px #0000003b;
-          padding: 24px 27px 24px 40px;
-          transform: scale3d(1.1, 1.2, 1.1);
-          margin: 16px 0;
-          -webkit-border-radius: 10px;
-          border-radius: 10px;
+          transform: scale3d(1.1, 1.1, 1.1);
+          margin: 1rem 0;
 
-          @media (max-width: 599px) {
-            padding: 34px 10px;
-          }
+          // @media (max-width: 599px) {
+          //   padding: 34px 10px;
+          // }
           @media (max-width: 1200px) {
-            width: 100% !important;
-            height: auto !important;
-            padding-bottom: 10px !important;
-            transform: inherit;
+            // width: 100% !important;
+            // height: auto !important;
+            // padding-bottom: 10px !important;
+            transform: none;
             margin: 0;
 
             .tab_contant {
@@ -358,8 +359,9 @@
     }
     .public_tab_abouts {
       width: 100%;
+
       @media (max-width: 1200px) {
-        display: none !important;
+        display: none;
       }
     }
     .traditions_tabs_content {

@@ -1,0 +1,116 @@
+<section class="section section--payments" id="payments">
+	<header class="section__header">
+		<span class="badge badge--payments">Πληρωμές</span>
+		<h3 class="section__title">Φέρνουμε τις αγορές <b>στα μέτρα σου</b></h3>
+	</header>
+	<div class="section__tabs tabs">
+		<div class="tabs-nav">
+			<!-- prettier-ignore -->
+			<include src="components/tab-button.html">
+				{ 
+          "type": "payments", 
+          "value": "flexpay", 
+          "icon": "./images/flexpay-icon.svg", 
+          "logo": "./images/flexpay-logo.svg", 
+          "description": { 
+            "desktop": "Eξόφλησε στο χρόνο σου σε έως 36 δόσεις, χωρίς πιστωτική!", 
+            "mobile": "Εξόφλησε το συνολικό ποσό των αγορών σου σε έως 36 δόσεις, επιλέγοντας εσύ το χρόνο και το ποσό κάθε δόσης, χωρίς πιστωτική!" 
+          }, 
+          "image": "./images/flexpay-mobile.png", 
+          "linkUrl": "https://www.public.gr/page/help/ypiresies/flex-pay", 
+          "linkLabel": "Μάθε περισσότερα" 
+        }
+			</include>
+			<!-- prettier-ignore -->
+			<include src="components/tab-button.html">
+				{ 
+          "type": "payments", 
+          "value": "klarna", 
+          "icon": "./images/klarna-icon.svg", 
+          "logo": "./images/klarna-logo.svg", 
+          "description": { 
+            "desktop": "Εξόφλησε σε 3 άτοκες δόσεις, χωρίς πιστωτική!", 
+            "mobile": "Εξόφλησε τις αγορες σου σε δεύτερο χρονο με 3 ατοκες δοσεις και χωρις πιστωτική!" 
+          }, 
+          "image": "./images/klarna-mobile.png", 
+          "linkUrl": "https://www.public.gr/page/help/ypiresies/klarna", 
+          "linkLabel": "Μάθε περισσότερα"
+				}
+			</include>
+			<!-- prettier-ignore -->
+			<include src="components/tab-button.html">
+				{ 
+          "type": "payments", 
+          "value": "paypal", 
+          "icon": "./images/paypal-icon.svg", 
+          "logo": "./images/paypal-logo.svg", 
+          "description": { 
+            "desktop": "Πλήρωσε online με ένα click, χωρίς κάρτα!", 
+            "mobile": "Πλήρωσε εύκολα και γρήγορα από τον Paypal λογαριασμό σου με ένα click!" 
+          }, 
+          "image": "./images/paypal-mobile.png", 
+          "linkUrl": "https://www.public.gr/page/help/tropoi-pliromis", 
+          "linkLabel": "Μάθε περισσότερα"
+				}
+			</include>
+			<!-- prettier-ignore -->
+			<include src="components/tab-button.html">
+				{ 
+          "type": "payments", 
+          "value": "iris", 
+          "icon": "./images/iris-icon.png", 
+          "logo": "./images/iris-logo.png", 
+          "description": { 
+            "desktop": "Πλήρωσε απευθείας από το λογαριασμό σου, χωρίς κάρτα!", 
+            "mobile": "Δώσε στις αγορές σου την ασφάλεια που θες με άμεση πληρωμή μέσω IRIS!" 
+          }, 
+          "image": "./images/iris-mobile.png", 
+          "linkUrl": "https://www.public.gr/page/help/tropoi-pliromis", 
+          "linkLabel": "Μάθε περισσότερα"
+				}
+			</include>
+		</div>
+		<div class="tabs-content">
+			<!-- prettier-ignore -->
+			<include src="components/tab-content.html" >
+        {
+          "type": "payments", 
+          "value": "flexpay", 
+          "image": "./images/flexpay-desktop.png", 
+          "linkUrl": "https://www.public.gr/page/help/ypiresies/flex-pay", 
+          "linkLabel": "Μάθε περισσότερα"
+        }
+      </include>
+			<!-- prettier-ignore -->
+			<include src="components/tab-content.html" >
+        {
+          "type": "payments", 
+          "value": "klarna", 
+          "image": "./images/klarna-desktop.png", 
+          "linkUrl": "https://www.public.gr/page/help/ypiresies/klarna", 
+          "linkLabel": "Μάθε περισσότερα"
+        }
+      </include>
+			<!-- prettier-ignore -->
+			<include src="components/tab-content.html" >
+        {
+          "type": "payments", 
+          "value": "paypal", 
+          "image": "./images/paypal-desktop.png", 
+          "linkUrl": "https://www.public.gr/page/help/tropoi-pliromis", 
+          "linkLabel": "Μάθε περισσότερα"
+        }
+      </include>
+			<!-- prettier-ignore -->
+			<include src="components/tab-content.html" >
+        {
+          "type": "payments", 
+          "value": "iris", 
+          "image": "./images/iris-desktop.png", 
+          "linkUrl": "https://www.public.gr/page/help/tropoi-pliromis", 
+          "linkLabel": "Μάθε περισσότερα"
+        }
+      </include>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,33 @@
+@use "sass:color" as c;
+@use "../functions" as *;
+@use "../helpers" as *;
+@use "../typography" as *;
+
+.badge {
+	@extend %bold;
+	display: inline-block;
+	padding: 0.5em 0.75em;
+	font-size: fluid-rem(1.25rem, 2rem);
+	line-height: 1.25;
+	border-radius: 1.25rem;
+
+	&--payments {
+		color: v("payments");
+		background-color: c.adjust(c("payments"), $alpha: -0.9);
+	}
+
+	&--deliveries {
+		color: v("deliveries");
+		background-color: c.adjust(c("deliveries"), $alpha: -0.9);
+	}
+
+	&--support {
+		color: v("support");
+		background-color: c.adjust(c("support"), $alpha: -0.9);
+	}
+
+	&--more {
+		color: v("more");
+		background-color: c.adjust(c("more"), $alpha: -0.9);
+	}
+}

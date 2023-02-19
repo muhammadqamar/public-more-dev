@@ -1,0 +1,51 @@
+@use "sass:color" as c;
+@use "../functions" as *;
+@use "../helpers" as *;
+@use "../typography" as *;
+
+.section {
+	--tab-button-shadow-size: 1.25rem;
+	padding-block: fluid-rem(2.5rem, 5rem);
+	position: relative;
+
+	&::before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		width: min(75rem, 100% - 0.5rem);
+		height: 1px;
+		background-color: v("off-white");
+		transform: translateX(-50%);
+	}
+
+	&__header {
+		@extend %container;
+		--container: 1200px;
+
+		@media (width < 1200px) {
+			--padding-inline: calc(var(--tab-button-shadow-size) / 2);
+		}
+	}
+
+	&__title {
+		font-size: fluid-rem(1.5rem, 3rem);
+		margin-block: 0.25em 0.75em;
+		width: min(30ch, 100%);
+		padding-inline: 0.5em;
+
+		b,
+		strong {
+			@extend %bold;
+		}
+	}
+}
+
+[id] {
+	scroll-margin-block-start: calc(var(--header-height) + 2rem);
+
+	@media (width < 1024px) {
+		scroll-margin-block-start: calc(var(--header-height) + 12rem);
+	}
+}

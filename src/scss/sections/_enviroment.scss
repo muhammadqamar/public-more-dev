@@ -1,0 +1,51 @@
+@use "sass:color" as c;
+@use "../functions" as *;
+@use "../helpers" as *;
+
+.section--enviroment {
+	.section__title {
+		text-align: center;
+		width: 100%;
+		margin-block-end: 2em;
+		margin-block-start: 0;
+	}
+
+	.eco {
+		display: grid;
+		place-items: end;
+
+		+ .eco {
+			margin-block-start: fluid-rem(1.5rem, 2.5rem);
+		}
+
+		&:nth-of-type(even) {
+			place-items: end start;
+		}
+
+		.button,
+		&__picture {
+			@media (width >= 768px) {
+				grid-area: 1 / -1;
+			}
+		}
+
+		&__picture {
+			@media (width > 600px) {
+				width: calc(100% - 2rem);
+			}
+		}
+
+		.button {
+			margin: fluid-rem(1rem, 2rem, 600 1440)
+				fluid-rem(1rem, 7rem, 600 1440);
+
+			@media (width < 600px) {
+				width: auto;
+			}
+
+			@media (width < 425px) {
+				justify-self: center;
+			}
+		}
+	}
+}
