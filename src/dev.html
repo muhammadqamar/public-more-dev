@@ -1,308 +1,252 @@
 <div data-holy>
-  <script
-    src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"
-    async
-  ></script>
+	<!-- <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js" async></script> -->
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.10.2/lottie_light.min.js" async></script> -->
+	<include src="scripts/lottie.html"></include>
+	<include src="scripts/petite-vue.html"></include>
 
-  <style>
-    @import "./scss/style.scss";
-  </style>
+	<style>
+		@import "./scss/fonts.scss";
+		@import "./scss/style.scss";
+	</style>
 
-  <include src="sections/public-more-hero.html"></include>
-  <div id="payments" class="main__container">
-    <include src="sections/public-payments.html"></include>
-    <include src="sections/public-traditions.html"></include>
-    <include src="sections/public-support.html"></include>
-    <include src="sections/public-reward-programs.html"></include>
-    <include src="sections/public-environments.html"></include>
-    <include src="sections/public-more-and-more.html"></include>
-  </div>
-  <script>
-    // slider
-    window.addEventListener("scroll", stickySlider);
+	<include src="sections/hero.html"></include>
+	<include src="sections/payments.html"></include>
+	<include src="sections/deliveries.html"></include>
+	<include src="sections/support.html"></include>
+	<include src="sections/rewards.html"></include>
+	<include src="sections/enviroment.html"></include>
+	<include src="sections/more.html"></include>
+	<script>
+		;(function () {
+			var store = PetiteVue.reactive({
+				payments: "flexpay",
+				deliveries: "next-day-delivery",
+				support: "safetynet",
+				more: "publicbusiness",
+				searchData: [
+					{
+						id: "payments",
+						text: "Πληρωμές Φέρνουμε τις αγορές στα μέτρα σου",
+						type: "section",
+					},
+					{
+						id: "deliveries",
+						text: "Παραδόσεις Παραδίδουμε ό,τι χρειάζεσαι με μεγαλύτερη ευκολία και ευελιξία από ποτέ!",
+						type: "section",
+					},
+					{
+						id: "support",
+						text: "Προστασία & Express Επισκευή Μετά την απομάκρυνση από το ταμείο, μένουμε δίπλα σου!",
+						type: "section",
+					},
+					{
+						id: "more",
+						text: "More & More Περισσότερες ευκολίες για να απολαμβάνεις περισσότερα!",
+						type: "section",
+					},
+					{
+						id: "rewards",
+						text: "Πρόγραμμα επιβράβευσης StudentClub MyClub Κάνε Εγγραφή",
+						heading: "Πρόγραμμα Επιβράβευσης",
+						type: "section",
+					},
+					{
+						id: "enviroment",
+						text: "eco Με λύσεις για να κάνεις καλό στο περιβάλλον, αλλά και οικονομία!",
+						heading: "Ecology",
+						type: "section",
+					},
+					{
+						id: "tradensave",
+						text: "trade&save eco Επίστρεψε την παλιά σου συσκευή για νέες αγορές με κέρδος έως και 1.000€!",
+						heading: "trade&save",
+						type: "service",
+					},
+					{
+						id: "refurbished",
+						text: "Refurbished προϊόντα με εγγύηση ποιότητας Επίλεξε μία ανακατασκευασμένη συσκευή και απόλαυσε 50% εξοικονόμηση χρημάτων και έως 12 μήνες εγγύηση!",
+						heading: "Refurbished προϊόντα",
+						type: "service",
+					},
+					{
+						id: "love-earth",
+						text: "Love Earth για έναν βιώσιμο πλανήτη",
+						heading: "Love Earth",
+						type: "service",
+					},
+					{
+						id: "next-day-delivery",
+						text: "next day delivery Παράλαβε στην πόρτα σου την επόμενη μέρα! 100.000 άμεσα διαθέσιμα προϊόντα έρχονται στην πόρτα σου την επόμενη κιόλας μέρα!",
+						type: "service",
+					},
+					{
+						id: "flex-delivery",
+						text: "flex delivery Επίλεξε ημερομηνία παράδοσης στο χώρο σου για 30 μέρες! Αν είσαι στην Αττική και θες περισσότερη ευελιξία, έχεις 30 ημέρες για να επιλέξεις ακριβώς τη μέρα και ώρα που θα παραλάβεις!",
+						type: "service",
+					},
+					{
+						id: "locker-pickup",
+						text: "locker-pickup Παράλαβε όποτε θες από 1.200 BOX NOW lockers πανελλαδικά! Βρες το κοντινότερο BOX NOW locker σου ανάμεσα σε 1.200 σημεία σε όλη την Ελλάδα, και παράλαβε με 1€ όπου και όποτε θες, χωρίς να κοιτάς το ρολόι!",
+						type: "service",
+					},
+					{
+						id: "expresspickup",
+						text: "expresspickup Παράλαβε από το αγαπημένο σου κατάστημα σε 60'! Παράγγειλε online το αγαπημένο σου προϊόν ανάμεσα σε χιλιάδες επιλογές και παράλαβέ το από ένα κατάστημα",
+						type: "service",
+					},
+					{
+						id: "flexpay",
+						text: "flexpay Eξόφλησε στο χρόνο σου σε έως 36 δόσεις, χωρίς πιστωτική! Εξόφλησε το συνολικό ποσό των αγορών σου σε έως 36 δόσεις, επιλέγοντας εσύ το χρόνο και το ποσό κάθε δόσης, χωρίς πιστωτική!",
+						type: "service",
+					},
+					{
+						id: "klarna",
+						text: "klarna Εξόφλησε σε 3 άτοκες δόσεις, χωρίς πιστωτική! Εξόφλησε τις αγορες σου σε δεύτερο χρονο με 3 ατοκες δοσεις και χωρις πιστωτική!",
+						type: "service",
+					},
+					{
+						id: "paypal",
+						text: "paypal Πλήρωσε online με ένα click, χωρίς κάρτα! Πλήρωσε εύκολα και γρήγορα από τον Paypal λογαριασμό σου με ένα click!",
+						type: "service",
+					},
+					{
+						id: "iris",
+						text: "iris Πλήρωσε απευθείας από το λογαριασμό σου, χωρίς κάρτα! Δώσε στις αγορές σου την ασφάλεια που θες με άμεση πληρωμή μέσω IRIS!",
+						type: "service",
+					},
+					{
+						id: "safetynet",
+						text: "safetynet Επεκτείνουμε την εγγύηση των νέων σου συσκευών για 5 χρόνια! Επεκτείνουμε την εγγύηση των νέων σου συσκευών για 5 χρόνια για να τις απολαμβάνεις ακόμα πιο ξέγνοιαστα!",
+						type: "service",
+					},
+					{
+						id: "irepair",
+						text: "irepair Επισκευάζουμε άμεσα και αξιόπιστα τη συσκευή σου, με την εγγύηση της iRepair! Απόλαυσε την πιο γρήγορη, οικονομική και αξιόπιστη λύση service για τη συσκευή σου σε ένα από τα επιλεγμένα καταστήματα Public & iRepair!",
+						type: "service",
+					},
+					{
+						id: "publicbusiness",
+						text: "publicbusiness Απολαύστε την all-in-one λύση για την επιχείρησή σας!",
+						type: "service",
+					},
+					{
+						id: "bookfriends",
+						text: "bookfriends Αναζήτησε κριτικές βιβλίων & προτάσεις για τη βιβλιοθήκη σου!",
+						type: "service",
+					},
+					{
+						id: "tickets",
+						text: "tickets Κλείσε το εισιτήριό σου στις πιο δυνατές σου στιγμές!",
+						type: "service",
+					},
+					{
+						id: "blog",
+						text: "blog Ανακάλυψε καθημερινά νέα και έξυπνα tips για όλα όσα θες να γνωρίζεις!",
+						type: "service",
+					},
+				],
+				searchValue: "",
+				searchEmpty: `<li class="empty"><p><strong>Εδώ μπορείς να βρεις υπηρεσίες της Public.</strong></p><p>Αν δεν βρήκες αυτό που ψάχνει, χρησιμοποίησε την βασική αναζήτηση της ιστοσελίδας που γράφει	"Ψάχνω για..."</p></li>`,
+				searchPage() {
+					if (this.searchValue === "") return
+					const searchResults = this.searchData.filter((result) =>
+						result.text.toLowerCase().includes(this.searchValue.toLowerCase())
+					)
 
-    var mediaQuery = window.matchMedia("(max-width: 936px)");
-    var sliderdiv = document.getElementById("searchSlider");
-    var sticky = sliderdiv.offsetTop;
+					if (searchResults.length > 0) {
+						searchResultList.innerHTML = ""
+						searchResults.map((result) => {
+							const li = document.createElement("li")
+							const a = document.createElement("a")
+							a.href = `#${result.id}`
+							a.onclick = () => (this.searchValue = "")
 
-    function stickySlider() {
-      if (!mediaQuery.matches) return;
-      if (window.pageYOffset >= sticky) {
-        sliderdiv.classList.add("_sticky");
-        document.getElementById("searchResult").style.display = "none";
-        document.querySelector(".main__container").style.marginBlockStart = `${
-          sliderdiv
-            .querySelector(".search_main_content")
-            .getBoundingClientRect().height * 3
-        }px`;
-        return;
-      }
-      document.querySelector(".main__container").removeAttribute("style");
-      sliderdiv.classList.remove("_sticky");
-    }
+							if (result.type === "section") {
+								const section = document.querySelector(`#${result.id}`)
+								const sectionTitle = section.querySelector(".section__title")
 
-    // traditions Tabs
-    function closeSearch() {
-      document.getElementById("searchResult").style.display = "none";
-    }
+								a.innerText = sectionTitle ? sectionTitle.innerText : result.heading
+							}
 
-    function searchResult(e) {
-      var DeliveryTab = [
-        {
-          link: "#NextDayDelivery",
-          heading: "Next Day Delivery",
-          text: "Παράλαβε στην πόρτα σου την επόμενη μέρα!",
-          icon: "https://public-more-dev.netlify.app/flex-delivery-tab-img-1.9833ece7.png",
-          includeText: true,
-        },
-        {
-          link: "#FlexDelivery",
-          heading: "Flex Delivery",
-          text: "Επίλεξε ημερομηνία παράδοσης στο χώρο σου για 30 μέρες!",
-          icon: "https://public-more-dev.netlify.app/flex-delivery-tab-img-2.bf285fb8.png",
-          includeText: true,
-        },
-        {
-          link: "#lockerpickup",
-          heading: "lockerpickup",
-          text: "Παράλαβε όποτε θες από 1.200 BOX NOW lockers πανελλαδικά!",
-          icon: "https://public-more-dev.netlify.app/flex-delivery-tab-img-3.32eb0c24.png",
-          includeText: true,
-        },
-        {
-          link: "#expresspickup",
-          heading: "expresspickup",
-          text: "Παράλαβε από το αγαπημένο σου κατάστημα σε 60'!",
-          icon: "https://public-more-dev.netlify.app/flex-delivery-tab-img-4.a2bf3cf2.png",
-          includeText: true,
-        },
-        {
-          link: "#flexpay",
-          heading: "flexpay",
-          text: "Πληρωμή σε έως 36 δόσεις, χωρίς πιστωτική	",
-          icon: "https://public-more-dev.netlify.app/flexpay.825677d1.png",
-        },
-        {
-          link: "#klarna",
-          heading: "klarna",
-          text: "Εξόφλησε σε 3 άτοκες δόσεις, χωρίς πιστωτική!",
-          icon: "https://public-more-dev.netlify.app/klarna-icon.67106c8b.png",
-        },
-        {
-          link: "#paypal",
-          heading: "paypal",
-          text: "Πλήρωσε online με ένα click, χωρίς κάρτα!",
-          icon: "https://public-more-dev.netlify.app/paypal-icon.922278ab.png",
-        },
-        {
-          link: "#iris",
-          heading: "iris",
-          text: "Πλήρωσε απευθείας από το λογαριασμό σου, χωρίς κάρτα!",
-          icon: "https://public-more-dev.netlify.app/iris.43fff485.png",
-        },
-        {
-          link: "#safetynet",
-          heading: "safetynet",
-          text: "Επεκτείνουμε την εγγύηση των νέων σου συσκευών για 5 χρόνια!",
-          icon: "https://public-more-dev.netlify.app/safetynet.014ae1c5.png",
-        },
-        {
-          link: "#iRepair",
-          heading: "iRepair",
-          text: "Επισκευάζουμε άμεσα και αξιόπιστα τη συσκευή σου, με την εγγύηση της iRepair!",
-          icon: "https://public-more-dev.netlify.app/iRepair.02f6ada5.png",
-        },
-        {
-          link: "#publicBusiness",
-          heading: "publicbusiness",
-          text: "Απολαύστε την all-in-one λύση για την επιχείρησή σας!",
-          icon: "https://public-more-dev.netlify.app/PB-icon-1.f5a8e830.svg",
-          includeText: true,
-        },
-        {
-          link: "#bookFriends",
-          heading: "bookfriends",
-          text: "Αναζήτησε κριτικές βιβλίων & προτάσεις για τη βιβλιοθήκη σου!",
-          icon: "https://public-more-dev.netlify.app/PB-icon-2.cdd1ecc5.svg",
-          includeText: true,
-        },
-        {
-          link: "#tickets",
-          heading: "Tickets",
-          text: "Κλείσε το εισιτήριό σου στις πιο δυνατές σου στιγμές!",
-          icon: "https://public-more-dev.netlify.app/PB-icon-3.00e4940a.svg",
-          includeText: true,
-        },
-        {
-          link: "#blog",
-          heading: "Blog",
-          text: "Σε «διαβάζουμε» και προτείνουμε!",
-          icon: "https://public-more-dev.netlify.app/PB-icon-4.d578a3eb.svg",
-          includeText: true,
-        },
-        {
-          link: "#trade&save",
-          heading: "trade&save",
-          text: "Trade & Save Επιστροφή παλιάς συσκευής για νέες αγορές με κέρδος έως και 1.000€!",
-          icon: "",
-          includeText: true,
-        },
-        {
-          link: "#loveearth",
-          heading: "Love Earth",
-          text: "Love Earth για έναν βιώσιμο πλανήτη",
-          icon: "",
-          includeText: true,
-        },
-        {
-          link: "#refurbished",
-          heading: "Refurbished",
-          text: "Refurbished προϊόντα με εγγύηση ποιότητας Επίλεξε μία ανακατασκευασμένη συσκευή και απόλαυσε 50% εξοικονόμηση χρημάτων και έως 12 μήνες εγγύηση!",
-          icon: "",
-          includeText: true,
-        },
-      ];
-      var searchDev = document.getElementById("searchResult");
+							if (result.type === "service") {
+								const title = document.querySelector(`#${result.id} .tab-button__title`).cloneNode(true)
+								a.appendChild(title)
+							}
 
-      var searchData = DeliveryTab.filter((data) => {
-        return (
-          data.heading?.toLowerCase().includes(e.value?.toLowerCase()) ||
-          data.text?.toLowerCase().includes(e.value?.toLowerCase())
-        );
-      });
+							li.appendChild(a)
+							searchResultList.appendChild(li)
+						})
+					} else {
+						searchResultList.innerHTML = this.searchEmpty
+					}
+				},
+				setCurrentTab(id, active) {
+					this[id] = active
+				},
+			})
 
-      if (e.value) {
-        searchDev.style.display = "flex";
-        if (searchData.length > 0) {
-          searchDev.innerHTML = DeliveryTab.filter((data) => {
-            return (
-              data.heading?.toLowerCase().includes(e.value?.toLowerCase()) ||
-              data.text?.toLowerCase().includes(e.value?.toLowerCase())
-            );
-          })
-            .map((data2) => {
-              return data2.includeText
-                ? `<a href="${data2.link}" onclick="closeSearch()" class="seachField"><img class='search_box_icon'  src="${data2.icon}" alt=""><h4 class='search_heading'>${data2.heading}</h4></a>`
-                : `<a href="${data2.link}" onclick="closeSearch()" class="seachField"><img class='search_box_icon'  src="${data2.icon}" alt="icon"></a>`;
-            })
-            .join(" ");
-        } else {
-          return (searchDev.innerHTML = `<div onclick="closeSearch()" class="Not_search_found"> <h6 class="not_search_heading">Εδώ μπορείς να βρεις υπηρεσίες της Public.</h6><p class="not_search_para">Αν δεν βρήκες αυτό που ψάχνεις, χρησιμοποίησε την βασική αναζήτηση του site που γράφει “Ψάχνω για…”</p></div>`);
-        }
-      } else {
-        searchDev.style.display = "none";
-      }
-    }
+			var mediaQuery = window.matchMedia("(max-width: 1023px)")
+			var doneLottieLoading = false
+			var pageHeader = document.querySelector("#header")
+			var heroSection = document.querySelector(".categories")
+			var categories = document.querySelector(".categories")
+			var heroSection = document.querySelector(".section--hero")
+			var pageHeaderHeight = pageHeader.getBoundingClientRect().height
+			var categoriesTop = categories.getBoundingClientRect().top
+			var distanceToScroll = categoriesTop - (pageHeaderHeight + 16)
+			var searchResultList = document.querySelector(".searchform__results-list")
 
-    function openTraditionsTab(evt, tabName, disTab) {
-      var i, tabcontent, tablinks, box, width, moreTabcontentMob;
-      box = document.querySelector(".traditions_tabs_flex_box_mob");
-      width = box.clientWidth;
+			document.querySelector("[data-holy]").setAttribute("style", `--header-height: ${pageHeaderHeight}px`)
 
-      if (width <= 1200) {
-        mobiletab = document.getElementsByClassName("mobileTab");
-        for (i = 0; i < mobiletab.length; i++) {
-          mobiletab[i].style.display = "none";
-        }
-      } else if (width >= 1201) {
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-          tabcontent[i].style.display = "none";
-        }
-      }
-      tablinks = document.querySelectorAll(".tradition_section .__not_active");
-      for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace("__active", "");
-      }
-      document.getElementById(tabName).style.display = "block";
-      document.getElementById(disTab).style.display = "block";
-      evt.currentTarget.className += " __active";
-    }
+			function raf() {
+				if (lottie === undefined) {
+					window.requestAnimationFrame(raf)
+					return
+				}
 
-    // payments Tabs
+				doneLottieLoading = true
+				lottie.loadAnimation({
+					container: document.querySelector("#holy-anim"),
+					path: "https://assets6.lottiefiles.com/packages/lf20_Shqi4jaJ6G.json",
+					renderer: "svg",
+					rendererSettings: {
+						preserveAspectRatio: "none",
+					},
+					loop: true,
+					autoplay: true,
+				})
+			}
 
-    function openPayTab(evt, tabName, disTab) {
-      var i, tabcontent, tablinks, box, width, mobiletab;
-      box = document.querySelector(".traditions_tabs_flex_box_mob");
-      width = box.clientWidth;
+			function fixIt() {
+				if (categories.classList.contains("categories--fixed")) return
+				categories.classList.add("categories--fixed")
+				categories.style.top = pageHeader.getBoundingClientRect().height + "px"
+				heroSection.style.marginBottom = categories.getBoundingClientRect().height + "px"
+			}
 
-      if (width <= 1200) {
-        mobiletab = document.getElementsByClassName("payTabcontentMob");
-        for (i = 0; i < mobiletab.length; i++) {
-          mobiletab[i].style.display = "none";
-        }
-      } else if (width >= 1201) {
-        tabcontent = document.getElementsByClassName("payTabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-          tabcontent[i].style.display = "none";
-        }
-      }
+			function unFixIt() {
+				if (!categories.classList.contains("categories--fixed")) return
+				categories.classList.remove("categories--fixed")
+				categories.removeAttribute("style")
+				heroSection.removeAttribute("style")
+			}
 
-      tablinks = document.querySelectorAll(".payent_section .__not_active");
-      for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace("__active", "");
-      }
-      document.getElementById(tabName).style.display = "block";
-      document.getElementById(disTab).style.display = "block";
-      evt.currentTarget.className += " __active";
-    }
+			function handleScroll() {
+				if (!mediaQuery.matches) {
+					unFixIt()
+					return
+				}
 
-    // suppert Tabs
+				if (window.scrollY >= distanceToScroll) {
+					fixIt()
+					return
+				}
+				unFixIt()
+			}
 
-    function openSuppertTab(evt, tabName, disTab) {
-      var i, tabcontent, tablinks, box, width, supTabcontentMob;
-      box = document.querySelector(".traditions_tabs_flex_box_mob");
-      width = box.clientWidth;
-
-      if (width <= 1200) {
-        supTabcontentMob = document.getElementsByClassName("supTabcontentMob");
-        for (i = 0; i < supTabcontentMob.length; i++) {
-          supTabcontentMob[i].style.display = "none";
-        }
-      } else if (width >= 1201) {
-        tabcontent = document.getElementsByClassName("supTabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-          tabcontent[i].style.display = "none";
-        }
-      }
-      tablinks = document.querySelectorAll(".suppert_section .__not_active");
-      for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace("__active", "");
-      }
-      document.getElementById(tabName).style.display = "block";
-      document.getElementById(disTab).style.display = "block";
-      evt.currentTarget.className += " __active";
-    }
-
-    // public more and more
-
-    function openPublicMoreTab(evt, tabName, disTab) {
-      var i, tabcontent, tablinks, box, width, moreTabcontentMob;
-      box = document.querySelector(".traditions_tabs_flex_box_mob");
-      width = box.clientWidth;
-
-      if (width <= 1200) {
-        moreTabcontentMob =
-          document.getElementsByClassName("moreTabcontentMob");
-        for (i = 0; i < moreTabcontentMob.length; i++) {
-          moreTabcontentMob[i].style.display = "none";
-        }
-      } else if (width >= 1201) {
-        tabcontent = document.getElementsByClassName("moreTabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-          tabcontent[i].style.display = "none";
-        }
-      }
-
-      tablinks = document.querySelectorAll(
-        ".more-and-more_section .__not_active"
-      );
-      for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace("__active", "");
-      }
-      document.getElementById(tabName).style.display = "block";
-      document.getElementById(disTab).style.display = "block";
-      evt.currentTarget.className += " __active";
-    }
-  </script>
+			PetiteVue.createApp(store).mount()
+			window.requestAnimationFrame(raf)
+			window.addEventListener("scroll", handleScroll)
+		})()
+	</script>
 </div>

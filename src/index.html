@@ -10,8 +10,6 @@
 			@import "./scss/style.scss";
 		</style>
 
-		<!-- <include src="sections/public-more-hero.html"></include> -->
-		<!-- <div id="payments" class="main__container"> -->
 		<include src="sections/hero.html"></include>
 		<include src="sections/payments.html"></include>
 		<include src="sections/deliveries.html"></include>
@@ -19,7 +17,6 @@
 		<include src="sections/rewards.html"></include>
 		<include src="sections/enviroment.html"></include>
 		<include src="sections/more.html"></include>
-		<!-- </div> -->
 		<script>
 			;(function () {
 				var store = PetiteVue.reactive({
@@ -100,7 +97,7 @@
 						},
 						{
 							id: "flexpay",
-							text: "Eξόφλησε στο χρόνο σου σε έως 36 δόσεις, χωρίς πιστωτική! Εξόφλησε το συνολικό ποσό των αγορών σου σε έως 36 δόσεις, επιλέγοντας εσύ το χρόνο και το ποσό κάθε δόσης, χωρίς πιστωτική!",
+							text: "flexpay Eξόφλησε στο χρόνο σου σε έως 36 δόσεις, χωρίς πιστωτική! Εξόφλησε το συνολικό ποσό των αγορών σου σε έως 36 δόσεις, επιλέγοντας εσύ το χρόνο και το ποσό κάθε δόσης, χωρίς πιστωτική!",
 							type: "service",
 						},
 						{
@@ -157,13 +154,13 @@
 							result.text.toLowerCase().includes(this.searchValue.toLowerCase())
 						)
 
-						console.log(searchResults[0])
 						if (searchResults.length > 0) {
 							searchResultList.innerHTML = ""
 							searchResults.map((result) => {
 								const li = document.createElement("li")
 								const a = document.createElement("a")
 								a.href = `#${result.id}`
+								a.onclick = () => (this.searchValue = "")
 
 								if (result.type === "section") {
 									const section = document.querySelector(`#${result.id}`)
@@ -190,6 +187,7 @@
 						this[id] = active
 					},
 				})
+
 				var mediaQuery = window.matchMedia("(max-width: 1023px)")
 				var doneLottieLoading = false
 				var pageHeader = document.querySelector("#header")
@@ -253,180 +251,6 @@
 				window.requestAnimationFrame(raf)
 				window.addEventListener("scroll", handleScroll)
 			})()
-
-			// window.addEventListener("scroll", stickySlider)
-
-			// var mediaQuery = window.matchMedia("(max-width: 936px)")
-			// var sliderdiv = document.getElementById("searchSlider")
-			// var sticky = sliderdiv.offsetTop
-
-			// function stickySlider() {
-			// 	if (!mediaQuery.matches) return
-			// 	if (window.pageYOffset >= sticky) {
-			// 		sliderdiv.classList.add("_sticky")
-			// 		document.getElementById("searchResult").style.display = "none"
-			// 		document.querySelector(".main__container").style.marginBlockStart = `${
-			// 			sliderdiv.querySelector(".search_main_content").getBoundingClientRect().height * 3
-			// 		}px`
-			// 		return
-			// 	}
-			// 	document.querySelector(".main__container").removeAttribute("style")
-			// 	sliderdiv.classList.remove("_sticky")
-			// }
-
-			// traditions Tabs
-			function closeSearch() {
-				document.getElementById("searchResult").style.display = "none"
-			}
-
-			function searchResult(e) {
-				var DeliveryTab = [
-					{
-						link: "#NextDayDelivery",
-						heading: "Next Day Delivery",
-						text: "Παράλαβε στην πόρτα σου την επόμενη μέρα!",
-						icon: "https://public-more-dev.netlify.app/flex-delivery-tab-img-1.9833ece7.png",
-						includeText: true,
-					},
-					{
-						link: "#FlexDelivery",
-						heading: "Flex Delivery",
-						text: "Επίλεξε ημερομηνία παράδοσης στο χώρο σου για 30 μέρες!",
-						icon: "https://public-more-dev.netlify.app/flex-delivery-tab-img-2.bf285fb8.png",
-						includeText: true,
-					},
-					{
-						link: "#lockerpickup",
-						heading: "lockerpickup",
-						text: "Παράλαβε όποτε θες από 1.200 BOX NOW lockers πανελλαδικά!",
-						icon: "https://public-more-dev.netlify.app/flex-delivery-tab-img-3.32eb0c24.png",
-						includeText: true,
-					},
-					{
-						link: "#expresspickup",
-						heading: "expresspickup",
-						text: "Παράλαβε από το αγαπημένο σου κατάστημα σε 60'!",
-						icon: "https://public-more-dev.netlify.app/flex-delivery-tab-img-4.a2bf3cf2.png",
-						includeText: true,
-					},
-					{
-						link: "#flexpay",
-						heading: "flexpay",
-						text: "Πληρωμή σε έως 36 δόσεις, χωρίς πιστωτική	",
-						icon: "https://public-more-dev.netlify.app/flexpay.825677d1.png",
-					},
-					{
-						link: "#klarna",
-						heading: "klarna",
-						text: "Εξόφλησε σε 3 άτοκες δόσεις, χωρίς πιστωτική!",
-						icon: "https://public-more-dev.netlify.app/klarna-icon.67106c8b.png",
-					},
-					{
-						link: "#paypal",
-						heading: "paypal",
-						text: "Πλήρωσε online με ένα click, χωρίς κάρτα!",
-						icon: "https://public-more-dev.netlify.app/paypal-icon.922278ab.png",
-					},
-					{
-						link: "#iris",
-						heading: "iris",
-						text: "Πλήρωσε απευθείας από το λογαριασμό σου, χωρίς κάρτα!",
-						icon: "https://public-more-dev.netlify.app/iris.43fff485.png",
-					},
-					{
-						link: "#safetynet",
-						heading: "safetynet",
-						text: "Επεκτείνουμε την εγγύηση των νέων σου συσκευών για 5 χρόνια!",
-						icon: "https://public-more-dev.netlify.app/safetynet.014ae1c5.png",
-					},
-					{
-						link: "#iRepair",
-						heading: "iRepair",
-						text: "Επισκευάζουμε άμεσα και αξιόπιστα τη συσκευή σου, με την εγγύηση της iRepair!",
-						icon: "https://public-more-dev.netlify.app/iRepair.02f6ada5.png",
-					},
-					{
-						link: "#publicBusiness",
-						heading: "publicbusiness",
-						text: "Απολαύστε την all-in-one λύση για την επιχείρησή σας!",
-						icon: "https://public-more-dev.netlify.app/PB-icon-1.f5a8e830.svg",
-						includeText: true,
-					},
-					{
-						link: "#bookFriends",
-						heading: "bookfriends",
-						text: "Αναζήτησε κριτικές βιβλίων & προτάσεις για τη βιβλιοθήκη σου!",
-						icon: "https://public-more-dev.netlify.app/PB-icon-2.cdd1ecc5.svg",
-						includeText: true,
-					},
-					{
-						link: "#tickets",
-						heading: "Tickets",
-						text: "Κλείσε το εισιτήριό σου στις πιο δυνατές σου στιγμές!",
-						icon: "https://public-more-dev.netlify.app/PB-icon-3.00e4940a.svg",
-						includeText: true,
-					},
-					{
-						link: "#blog",
-						heading: "Blog",
-						text: "Σε «διαβάζουμε» και προτείνουμε!",
-						icon: "https://public-more-dev.netlify.app/PB-icon-4.d578a3eb.svg",
-						includeText: true,
-					},
-					{
-						link: "#trade&save",
-						heading: "trade&save",
-						text: "Trade & Save Επιστροφή παλιάς συσκευής για νέες αγορές με κέρδος έως και 1.000€!",
-						icon: "",
-						includeText: true,
-					},
-					{
-						link: "#loveearth",
-						heading: "Love Earth",
-						text: "Love Earth για έναν βιώσιμο πλανήτη",
-						icon: "",
-						includeText: true,
-					},
-					{
-						link: "#refurbished",
-						heading: "Refurbished",
-						text: "Refurbished προϊόντα με εγγύηση ποιότητας Επίλεξε μία ανακατασκευασμένη συσκευή και απόλαυσε 50% εξοικονόμηση χρημάτων και έως 12 μήνες εγγύηση!",
-						icon: "",
-						includeText: true,
-					},
-				]
-				var searchDev = document.getElementById("searchResult")
-
-				var searchData = DeliveryTab.filter((data) => {
-					return (
-						data.heading?.toLowerCase().includes(e.value?.toLowerCase()) ||
-						data.text?.toLowerCase().includes(e.value?.toLowerCase())
-					)
-				})
-
-				if (e.value) {
-					searchDev.style.display = "flex"
-					if (searchData.length > 0) {
-						searchDev.innerHTML = DeliveryTab.filter((data) => {
-							return (
-								data.heading?.toLowerCase().includes(e.value?.toLowerCase()) ||
-								data.text?.toLowerCase().includes(e.value?.toLowerCase())
-							)
-						})
-							.map((data2) => {
-								console.log(data2)
-								return data2.includeText
-									? `<a href="${data2.link}" onclick="closeSearch()" class="seachField"><img class='search_box_icon'  src="${data2.icon}" alt=""><h4 class='search_heading'>${data2.heading}</h4></a>`
-									: `<a href="${data2.link}" onclick="closeSearch()" class="seachField"><img class='search_box_icon'  src="${data2.icon}" alt="icon"></a>`
-							})
-							.join(" ")
-					} else {
-						return (searchDev.innerHTML = `<div onclick="closeSearch()" class="Not_search_found"> <h6 class="not_search_heading">Εδώ μπορείς να βρεις υπηρεσίες της Public.</h6><p class="not_search_para">Αν δεν βρήκες αυτό που ψάχνεις, χρησιμοποίησε την βασική αναζήτηση του site που γράφει “Ψάχνω για…”</p></div>`)
-					}
-				} else {
-					searchDev.style.display = "none"
-				}
-			}
 		</script>
 	</div>
 </module>

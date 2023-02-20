@@ -87,6 +87,7 @@
 						var(--glass-border) - var(--glass-padding)
 					);
 
+					&:focus,
 					&:hover {
 						background-color: v("off-white");
 					}

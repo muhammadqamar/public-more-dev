@@ -6,38 +6,3 @@
 @forward "./rewards";
 @forward "./enviroment";
 @forward "./more";
-@forward "./publi-more";
-@forward "./public-traditions";
-@forward "./public-reward-programs";
-@forward "./public-environments";
-
-// .main__container {
-// 	max-width: 1440px;
-// 	margin: 0 auto;
-// 	position: relative;
-
-// 	&::before {
-// 		content: "";
-// 		position: absolute;
-// 		top: -115px;
-// 		right: 72px;
-// 		z-index: -1;
-// 		width: 433px;
-// 		height: 334px;
-// 		background-image: url("../images/public-more/arrow-img.png");
-// 		background-repeat: no-repeat;
-// 		background-position: center;
-// 		background-size: contain;
-
-// 		@media (max-width: 936px) {
-// 			top: -275px;
-// 			width: 300px;
-// 			height: 250px;
-// 			right: 0;
-// 		}
-// 		@media (min-width: 936px) and (max-width: 1200px) {
-// 			top: -290px;
-// 			margin-bottom: 270px;
-// 		}
-// 	}
-// }
