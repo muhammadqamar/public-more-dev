@@ -123,22 +123,22 @@
 					},
 					{
 						id: "publicbusiness",
-						text: "publicbusiness Απολαύστε την all-in-one λύση για την επιχείρησή σας!",
+						text: "publicbusiness Η all-in-one λύση για επαγγελματίες και επιχειρήσεις Απολαύστε ολοκληρωμένες λύσεις σε εξοπλισμό γραφείου, υπολογιστές, κλιματισμό, έπιπλα και ηλεκτρικές συσκευές, και εξασφαλίστε το καλύτερο για την επιχείρησή σας! Απολαύστε την all-in-one λύση για την επιχείρησή σας!",
 						type: "service",
 					},
 					{
 						id: "bookfriends",
-						text: "bookfriends Αναζήτησε κριτικές βιβλίων & προτάσεις για τη βιβλιοθήκη σου!",
+						text: "bookfriends Διαβάζουμε και σου προτείνουμε Μοιραζόμαστε μαζί σου τα πάντα για τα βιβλία που αγαπάς, με κριτικές και νέες προτάσεις αποκλειστικά για τη βιβλιοθήκη σου! Αναζήτησε κριτικές βιβλίων & προτάσεις για τη βιβλιοθήκη σου!",
 						type: "service",
 					},
 					{
 						id: "tickets",
-						text: "tickets Κλείσε το εισιτήριό σου στις πιο δυνατές σου στιγμές!",
+						text: "tickets Το εισιτήριο στις πιο δυνατές σου στιγμές Κλείσε εύκολα και γρήγορα εισιτήρια για παραστάσεις, συναυλίες, εκδηλώσεις και κάθε εμπειρία που θες να ζήσεις! Κλείσε το εισιτήριό σου στις πιο δυνατές σου στιγμές!",
 						type: "service",
 					},
 					{
 						id: "blog",
-						text: "blog Ανακάλυψε καθημερινά νέα και έξυπνα tips για όλα όσα θες να γνωρίζεις!",
+						text: "blog Σε διαβάζουμε και προτείνουμε! Ανακάλυψε καθημερινά όλα όσα θες να γνωρίζεις, με ιδέες, νέα και συμβουλές από την ομάδα των Public Editors! Ανακάλυψε καθημερινά νέα και έξυπνα tips για όλα όσα θες να γνωρίζεις!",
 						type: "service",
 					},
 				],
@@ -155,7 +155,7 @@
 						searchResults.map((result) => {
 							const li = document.createElement("li")
 							const a = document.createElement("a")
-							a.href = `#${result.id}`
+							a.href = `${window.location.origin}/#${result.id}`
 							a.onclick = () => (this.searchValue = "")
 
 							if (result.type === "section") {
@@ -166,8 +166,14 @@
 							}
 
 							if (result.type === "service") {
-								const title = document.querySelector(`#${result.id} .tab-button__title`).cloneNode(true)
-								a.appendChild(title)
+								const title = document.querySelector(`#${result.id} .tab-button__title`)
+
+								if (!!title) {
+									const titleNode = title.cloneNode(true)
+									a.appendChild(titleNode)
+								} else {
+									a.innerHTML = result.heading
+								}
 							}
 
 							li.appendChild(a)
