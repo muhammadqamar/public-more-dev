@@ -8,8 +8,8 @@
 		"clean": "rimraf .parcel-cache dist/*",
 		"prestart": "rimraf .parcel-cache dist/*",
 		"prebuild": "rimraf .parcel-cache dist/*",
-		"build": "parcel build src/*.html",
-		"build:dev": "parcel build src/dev.html"
+		"build:preview": "parcel build src/index.html",
+		"build": "parcel build src/dev.html"
 	},
 	"keywords": [],
 	"author": "",
