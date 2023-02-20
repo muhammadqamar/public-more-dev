@@ -170,10 +170,14 @@
 								}
 
 								if (result.type === "service") {
-									const title = document
-										.querySelector(`#${result.id} .tab-button__title`)
-										.cloneNode(true)
-									a.appendChild(title)
+									const title = document.querySelector(`#${result.id} .tab-button__title`)
+
+									if (!!title) {
+										const titleNode = title.cloneNode(true)
+										a.appendChild(titleNode)
+									} else {
+										a.innerHTML = result.heading
+									}
 								}
 
 								li.appendChild(a)
