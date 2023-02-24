@@ -38,6 +38,10 @@
 		inline-size: 100%;
 		font: inherit;
 		font-size: fluid-rem(1.125rem, 1.5rem);
+
+		&::-webkit-search-cancel-button {
+			display: none;
+		}
 	}
 
 	&__submit {
@@ -45,13 +49,14 @@
 		justify-self: end;
 		border: 0;
 		cursor: pointer;
-		background-color: v("deliveries");
-		color: v("white");
+		background-color: transparent;
+		color: hsl(0deg 0% 0% / 0.2);
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
 		align-self: center;
 		margin-inline-end: 0.25rem;
+		pointer-events: none;
 
 		svg {
 			@include size(1.5rem);
@@ -76,12 +81,20 @@
 		}
 
 		&-list {
+			--icon-size: 3rem;
 			margin: 0;
 			padding: fluid-rem(1.25rem, 2rem);
 			background-color: v("white");
 			border-radius: calc(var(--glass-border) - var(--glass-padding));
 			display: grid;
 			gap: 0.75rem;
+
+			@media (width < 420px) {
+				--icon-size: 2rem;
+			}
+			@media (width < 375px) {
+				--icon-size: 1.5rem;
+			}
 
 			li {
 				&:not(.empty) {
@@ -103,14 +116,15 @@
 				}
 
 				&.empty {
+					text-align: center;
+
 					strong {
 						@extend %bold;
 						color: v("black");
 					}
 
 					p {
-						font-size: 0.75rem;
-						text-align: center;
+						font-size: 0.875rem;
 						color: c.adjust(c("black"), $alpha: -0.35);
 
 						&:not(:first-child) {

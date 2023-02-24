@@ -4,6 +4,7 @@
 	"description": "",
 	"scripts": {
 		"start": "parcel --no-cache src/index.html",
+		"start:dev": "parcel --no-cache src/dev.html",
 		"serve": "http-server -p 1337 dist -c-1",
 		"clean": "rimraf .parcel-cache dist/*",
 		"prestart": "rimraf .parcel-cache dist/*",

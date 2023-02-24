@@ -46,6 +46,6 @@
 	scroll-margin-block-start: calc(var(--header-height) + 2rem);
 
 	@media (width < 1024px) {
-		scroll-margin-block-start: calc(var(--header-height) + 12rem);
+		scroll-margin-block-start: calc(var(--header-height) + 7rem);
 	}
 }

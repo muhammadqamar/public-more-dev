@@ -19,181 +19,7 @@
 		<include src="sections/more.html"></include>
 		<script>
 			;(function () {
-				var store = PetiteVue.reactive({
-					payments: "flexpay",
-					deliveries: "next-day-delivery",
-					support: "safetynet",
-					more: "publicbusiness",
-					searchData: [
-						{
-							id: "payments",
-							text: "Πληρωμές Φέρνουμε τις αγορές στα μέτρα σου",
-							type: "section",
-						},
-						{
-							id: "deliveries",
-							text: "Παραδόσεις Παραδίδουμε ό,τι χρειάζεσαι με μεγαλύτερη ευκολία και ευελιξία από ποτέ!",
-							type: "section",
-						},
-						{
-							id: "support",
-							text: "Προστασία & Express Επισκευή Μετά την απομάκρυνση από το ταμείο, μένουμε δίπλα σου!",
-							type: "section",
-						},
-						{
-							id: "more",
-							text: "More & More Περισσότερες ευκολίες για να απολαμβάνεις περισσότερα!",
-							type: "section",
-						},
-						{
-							id: "rewards",
-							text: "Πρόγραμμα επιβράβευσης StudentClub MyClub Κάνε Εγγραφή",
-							heading: "Πρόγραμμα Επιβράβευσης",
-							type: "section",
-						},
-						{
-							id: "enviroment",
-							text: "eco Με λύσεις για να κάνεις καλό στο περιβάλλον, αλλά και οικονομία!",
-							heading: "Ecology",
-							type: "section",
-						},
-						{
-							id: "tradensave",
-							text: "trade&save eco Επίστρεψε την παλιά σου συσκευή για νέες αγορές με κέρδος έως και 1.000€!",
-							heading: "trade&save",
-							type: "service",
-						},
-						{
-							id: "refurbished",
-							text: "Refurbished προϊόντα με εγγύηση ποιότητας Επίλεξε μία ανακατασκευασμένη συσκευή και απόλαυσε 50% εξοικονόμηση χρημάτων και έως 12 μήνες εγγύηση!",
-							heading: "Refurbished προϊόντα",
-							type: "service",
-						},
-						{
-							id: "love-earth",
-							text: "Love Earth για έναν βιώσιμο πλανήτη",
-							heading: "Love Earth",
-							type: "service",
-						},
-						{
-							id: "next-day-delivery",
-							text: "next day delivery Παράλαβε στην πόρτα σου την επόμενη μέρα! 100.000 άμεσα διαθέσιμα προϊόντα έρχονται στην πόρτα σου την επόμενη κιόλας μέρα!",
-							type: "service",
-						},
-						{
-							id: "flex-delivery",
-							text: "flex delivery Επίλεξε ημερομηνία παράδοσης στο χώρο σου για 30 μέρες! Αν είσαι στην Αττική και θες περισσότερη ευελιξία, έχεις 30 ημέρες για να επιλέξεις ακριβώς τη μέρα και ώρα που θα παραλάβεις!",
-							type: "service",
-						},
-						{
-							id: "locker-pickup",
-							text: "locker-pickup Παράλαβε όποτε θες από 1.200 BOX NOW lockers πανελλαδικά! Βρες το κοντινότερο BOX NOW locker σου ανάμεσα σε 1.200 σημεία σε όλη την Ελλάδα, και παράλαβε με 1€ όπου και όποτε θες, χωρίς να κοιτάς το ρολόι!",
-							type: "service",
-						},
-						{
-							id: "expresspickup",
-							text: "expresspickup Παράλαβε από το αγαπημένο σου κατάστημα σε 60'! Παράγγειλε online το αγαπημένο σου προϊόν ανάμεσα σε χιλιάδες επιλογές και παράλαβέ το από ένα κατάστημα",
-							type: "service",
-						},
-						{
-							id: "flexpay",
-							text: "flexpay Eξόφλησε στο χρόνο σου σε έως 36 δόσεις, χωρίς πιστωτική! Εξόφλησε το συνολικό ποσό των αγορών σου σε έως 36 δόσεις, επιλέγοντας εσύ το χρόνο και το ποσό κάθε δόσης, χωρίς πιστωτική!",
-							type: "service",
-						},
-						{
-							id: "klarna",
-							text: "klarna Εξόφλησε σε 3 άτοκες δόσεις, χωρίς πιστωτική! Εξόφλησε τις αγορες σου σε δεύτερο χρονο με 3 ατοκες δοσεις και χωρις πιστωτική!",
-							type: "service",
-						},
-						{
-							id: "paypal",
-							text: "paypal Πλήρωσε online με ένα click, χωρίς κάρτα! Πλήρωσε εύκολα και γρήγορα από τον Paypal λογαριασμό σου με ένα click!",
-							type: "service",
-						},
-						{
-							id: "iris",
-							text: "iris Πλήρωσε απευθείας από το λογαριασμό σου, χωρίς κάρτα! Δώσε στις αγορές σου την ασφάλεια που θες με άμεση πληρωμή μέσω IRIS!",
-							type: "service",
-						},
-						{
-							id: "safetynet",
-							text: "safetynet Επεκτείνουμε την εγγύηση των νέων σου συσκευών για 5 χρόνια! Επεκτείνουμε την εγγύηση των νέων σου συσκευών για 5 χρόνια για να τις απολαμβάνεις ακόμα πιο ξέγνοιαστα!",
-							type: "service",
-						},
-						{
-							id: "irepair",
-							text: "irepair Επισκευάζουμε άμεσα και αξιόπιστα τη συσκευή σου, με την εγγύηση της iRepair! Απόλαυσε την πιο γρήγορη, οικονομική και αξιόπιστη λύση service για τη συσκευή σου σε ένα από τα επιλεγμένα καταστήματα Public & iRepair!",
-							type: "service",
-						},
-						{
-							id: "publicbusiness",
-							text: "publicbusiness Η all-in-one λύση για επαγγελματίες και επιχειρήσεις Απολαύστε ολοκληρωμένες λύσεις σε εξοπλισμό γραφείου, υπολογιστές, κλιματισμό, έπιπλα και ηλεκτρικές συσκευές, και εξασφαλίστε το καλύτερο για την επιχείρησή σας! Απολαύστε την all-in-one λύση για την επιχείρησή σας!",
-							type: "service",
-						},
-						{
-							id: "bookfriends",
-							text: "bookfriends Διαβάζουμε και σου προτείνουμε Μοιραζόμαστε μαζί σου τα πάντα για τα βιβλία που αγαπάς, με κριτικές και νέες προτάσεις αποκλειστικά για τη βιβλιοθήκη σου! Αναζήτησε κριτικές βιβλίων & προτάσεις για τη βιβλιοθήκη σου!",
-							type: "service",
-						},
-						{
-							id: "tickets",
-							text: "tickets Το εισιτήριο στις πιο δυνατές σου στιγμές Κλείσε εύκολα και γρήγορα εισιτήρια για παραστάσεις, συναυλίες, εκδηλώσεις και κάθε εμπειρία που θες να ζήσεις! Κλείσε το εισιτήριό σου στις πιο δυνατές σου στιγμές!",
-							type: "service",
-						},
-						{
-							id: "blog",
-							text: "blog Σε διαβάζουμε και προτείνουμε! Ανακάλυψε καθημερινά όλα όσα θες να γνωρίζεις, με ιδέες, νέα και συμβουλές από την ομάδα των Public Editors! Ανακάλυψε καθημερινά νέα και έξυπνα tips για όλα όσα θες να γνωρίζεις!",
-							type: "service",
-						},
-					],
-					searchValue: "",
-					searchEmpty: `<li class="empty"><p><strong>Εδώ μπορείς να βρεις υπηρεσίες της Public.</strong></p><p>Αν δεν βρήκες αυτό που ψάχνει, χρησιμοποίησε την βασική αναζήτηση της ιστοσελίδας που γράφει	"Ψάχνω για..."</p></li>`,
-					searchPage() {
-						if (this.searchValue === "") return
-						const searchResults = this.searchData.filter((result) =>
-							result.text.toLowerCase().includes(this.searchValue.toLowerCase())
-						)
-
-						if (searchResults.length > 0) {
-							searchResultList.innerHTML = ""
-							searchResults.map((result) => {
-								const li = document.createElement("li")
-								const a = document.createElement("a")
-								a.href = `${window.location.origin}/#${result.id}`
-								a.onclick = () => (this.searchValue = "")
-
-								if (result.type === "section") {
-									const section = document.querySelector(`#${result.id}`)
-									const sectionTitle = section.querySelector(".section__title")
-
-									a.innerText = sectionTitle ? sectionTitle.innerText : result.heading
-								}
-
-								if (result.type === "service") {
-									const title = document.querySelector(`#${result.id} .tab-button__title`)
-
-									if (!!title) {
-										const titleNode = title.cloneNode(true)
-										a.appendChild(titleNode)
-									} else {
-										a.innerHTML = result.heading
-									}
-								}
-
-								li.appendChild(a)
-								searchResultList.appendChild(li)
-							})
-						} else {
-							searchResultList.innerHTML = this.searchEmpty
-						}
-					},
-					setCurrentTab(id, active) {
-						this[id] = active
-					},
-				})
-
 				var mediaQuery = window.matchMedia("(max-width: 1023px)")
-				var doneLottieLoading = false
 				var pageHeader = document.querySelector("#header")
 				var heroSection = document.querySelector(".categories")
 				var categories = document.querySelector(".categories")
@@ -202,27 +28,9 @@
 				var categoriesTop = categories.getBoundingClientRect().top
 				var distanceToScroll = categoriesTop - (pageHeaderHeight + 16)
 				var searchResultList = document.querySelector(".searchform__results-list")
+				var pageLink = window.location.href
 
 				document.querySelector("[data-holy]").setAttribute("style", `--header-height: ${pageHeaderHeight}px`)
-
-				function raf() {
-					if (lottie === undefined) {
-						window.requestAnimationFrame(raf)
-						return
-					}
-
-					doneLottieLoading = true
-					lottie.loadAnimation({
-						container: document.querySelector("#holy-anim"),
-						path: "https://assets6.lottiefiles.com/packages/lf20_Shqi4jaJ6G.json",
-						renderer: "svg",
-						rendererSettings: {
-							preserveAspectRatio: "none",
-						},
-						loop: true,
-						autoplay: true,
-					})
-				}
 
 				function fixIt() {
 					if (categories.classList.contains("categories--fixed")) return
@@ -251,8 +59,204 @@
 					unFixIt()
 				}
 
-				PetiteVue.createApp(store).mount()
-				window.requestAnimationFrame(raf)
+				function loadFunctionality() {
+					if (typeof lottie === "undefined" || typeof PetiteVue === "undefined") {
+						console.log("lottie/vue waiting room...")
+						return
+					}
+
+					console.log({ PetiteVue, lottie })
+					const store = PetiteVue.reactive({
+						payments: "flexpay",
+						deliveries: "next-day-delivery",
+						support: "safetynet",
+						more: "publicbusiness",
+						searchData: [
+							{
+								id: "payments",
+								text: "Πληρωμές Φέρνουμε τις αγορές στα μέτρα σου",
+								type: "section",
+							},
+							{
+								id: "deliveries",
+								text: "Παραδόσεις Παραδίδουμε ό,τι χρειάζεσαι με μεγαλύτερη ευκολία και ευελιξία από ποτέ!",
+								type: "section",
+							},
+							{
+								id: "support",
+								text: "Προστασία & Express Επισκευή Μετά την απομάκρυνση από το ταμείο, μένουμε δίπλα σου!",
+								type: "section",
+							},
+							{
+								id: "more",
+								text: "More & More Περισσότερες ευκολίες για να απολαμβάνεις περισσότερα!",
+								type: "section",
+							},
+							{
+								id: "rewards",
+								text: "Πρόγραμμα επιβράβευσης StudentClub MyClub Κάνε Εγγραφή",
+								heading: "Πρόγραμμα Επιβράβευσης",
+								type: "section",
+							},
+							{
+								id: "enviroment",
+								text: "eco Με λύσεις για να κάνεις καλό στο περιβάλλον, αλλά και οικονομία!",
+								heading: "Ecology",
+								type: "section",
+							},
+							{
+								id: "tradensave",
+								text: "trade&save eco Επίστρεψε την παλιά σου συσκευή για νέες αγορές με κέρδος έως και 1.000€!",
+								heading: "trade&save",
+								type: "service",
+							},
+							{
+								id: "refurbished",
+								text: "Refurbished προϊόντα με εγγύηση ποιότητας Επίλεξε μία ανακατασκευασμένη συσκευή και απόλαυσε 50% εξοικονόμηση χρημάτων και έως 12 μήνες εγγύηση!",
+								heading: "Refurbished προϊόντα",
+								type: "service",
+							},
+							{
+								id: "love-earth",
+								text: "Love Earth για έναν βιώσιμο πλανήτη",
+								heading: "Love Earth",
+								type: "service",
+							},
+							{
+								id: "next-day-delivery",
+								text: "next day delivery Παράλαβε στην πόρτα σου την επόμενη μέρα! 100.000 άμεσα διαθέσιμα προϊόντα έρχονται στην πόρτα σου την επόμενη κιόλας μέρα!",
+								type: "service",
+							},
+							{
+								id: "flex-delivery",
+								text: "flex delivery Επίλεξε ημερομηνία παράδοσης στο χώρο σου για 30 μέρες! Αν είσαι στην Αττική και θες περισσότερη ευελιξία, έχεις 30 ημέρες για να επιλέξεις ακριβώς τη μέρα και ώρα που θα παραλάβεις!",
+								type: "service",
+							},
+							{
+								id: "locker-pickup",
+								text: "locker-pickup Παράλαβε όποτε θες από 1.200 BOX NOW lockers πανελλαδικά! Βρες το κοντινότερο BOX NOW locker σου ανάμεσα σε 1.200 σημεία σε όλη την Ελλάδα, και παράλαβε με 1€ όπου και όποτε θες, χωρίς να κοιτάς το ρολόι!",
+								type: "service",
+							},
+							{
+								id: "expresspickup",
+								text: "expresspickup Παράλαβε από το αγαπημένο σου κατάστημα σε 60'! Παράγγειλε online το αγαπημένο σου προϊόν ανάμεσα σε χιλιάδες επιλογές και παράλαβέ το από ένα κατάστημα",
+								type: "service",
+							},
+							{
+								id: "flexpay",
+								text: "flexpay Eξόφλησε στο χρόνο σου σε έως 36 δόσεις, χωρίς πιστωτική! Εξόφλησε το συνολικό ποσό των αγορών σου σε έως 36 δόσεις, επιλέγοντας εσύ το χρόνο και το ποσό κάθε δόσης, χωρίς πιστωτική!",
+								type: "service",
+							},
+							{
+								id: "klarna",
+								text: "klarna Εξόφλησε σε 3 άτοκες δόσεις, χωρίς πιστωτική! Εξόφλησε τις αγορες σου σε δεύτερο χρονο με 3 ατοκες δοσεις και χωρις πιστωτική!",
+								type: "service",
+							},
+							{
+								id: "paypal",
+								text: "paypal Πλήρωσε online με ένα click, χωρίς κάρτα! Πλήρωσε εύκολα και γρήγορα από τον Paypal λογαριασμό σου με ένα click!",
+								type: "service",
+							},
+							{
+								id: "iris",
+								text: "iris Πλήρωσε απευθείας από το λογαριασμό σου, χωρίς κάρτα! Δώσε στις αγορές σου την ασφάλεια που θες με άμεση πληρωμή μέσω IRIS!",
+								type: "service",
+							},
+							{
+								id: "safetynet",
+								text: "safetynet Επεκτείνουμε την εγγύηση των νέων σου συσκευών για 5 χρόνια! Επεκτείνουμε την εγγύηση των νέων σου συσκευών για 5 χρόνια για να τις απολαμβάνεις ακόμα πιο ξέγνοιαστα!",
+								type: "service",
+							},
+							{
+								id: "irepair",
+								text: "irepair Επισκευάζουμε άμεσα και αξιόπιστα τη συσκευή σου, με την εγγύηση της iRepair! Απόλαυσε την πιο γρήγορη, οικονομική και αξιόπιστη λύση service για τη συσκευή σου σε ένα από τα επιλεγμένα καταστήματα Public & iRepair!",
+								type: "service",
+							},
+							{
+								id: "publicbusiness",
+								text: "publicbusiness Η all-in-one λύση για επαγγελματίες και επιχειρήσεις Απολαύστε ολοκληρωμένες λύσεις σε εξοπλισμό γραφείου, υπολογιστές, κλιματισμό, έπιπλα και ηλεκτρικές συσκευές, και εξασφαλίστε το καλύτερο για την επιχείρησή σας! Απολαύστε την all-in-one λύση για την επιχείρησή σας!",
+								type: "service",
+							},
+							{
+								id: "bookfriends",
+								text: "bookfriends Διαβάζουμε και σου προτείνουμε Μοιραζόμαστε μαζί σου τα πάντα για τα βιβλία που αγαπάς, με κριτικές και νέες προτάσεις αποκλειστικά για τη βιβλιοθήκη σου! Αναζήτησε κριτικές βιβλίων & προτάσεις για τη βιβλιοθήκη σου!",
+								type: "service",
+							},
+							{
+								id: "tickets",
+								text: "tickets Το εισιτήριο στις πιο δυνατές σου στιγμές Κλείσε εύκολα και γρήγορα εισιτήρια για παραστάσεις, συναυλίες, εκδηλώσεις και κάθε εμπειρία που θες να ζήσεις! Κλείσε το εισιτήριό σου στις πιο δυνατές σου στιγμές!",
+								type: "service",
+							},
+							{
+								id: "blog",
+								text: "blog Σε διαβάζουμε και προτείνουμε! Ανακάλυψε καθημερινά όλα όσα θες να γνωρίζεις, με ιδέες, νέα και συμβουλές από την ομάδα των Public Editors! Ανακάλυψε καθημερινά νέα και έξυπνα tips για όλα όσα θες να γνωρίζεις!",
+								type: "service",
+							},
+						],
+						searchValue: "",
+						searchEmpty: `<li class="empty"><p><strong>Εδώ μπορείς να βρεις υπηρεσίες της Public.</strong></p><p>Αν δεν βρήκες αυτό που ψάχνει, χρησιμοποίησε την βασική αναζήτηση της ιστοσελίδας που γράφει	"Ψάχνω για..."</p></li>`,
+						searchPage() {
+							if (this.searchValue === "") return
+							const searchResults = this.searchData.filter((result) =>
+								result.text.toLowerCase().includes(this.searchValue.toLowerCase())
+							)
+
+							if (searchResults.length > 0) {
+								searchResultList.innerHTML = ""
+								searchResults.map((result) => {
+									const li = document.createElement("li")
+									const a = document.createElement("a")
+									a.href = `${pageLink}#${result.id}`
+									a.onclick = () => {
+										window.location.href = a.href
+										this.searchValue = ""
+									}
+
+									if (result.type === "section") {
+										const section = document.querySelector(`#${result.id}`)
+										const sectionTitle = section.querySelector(".section__title")
+
+										a.innerText = sectionTitle ? sectionTitle.innerText : result.heading
+									}
+
+									if (result.type === "service") {
+										const title = document.querySelector(`#${result.id} .tab-button__title`)
+
+										if (!!title) {
+											const titleNode = title.cloneNode(true)
+											a.appendChild(titleNode)
+										} else {
+											a.innerHTML = result.heading
+										}
+									}
+
+									li.appendChild(a)
+									searchResultList.appendChild(li)
+								})
+							} else {
+								searchResultList.innerHTML = this.searchEmpty
+							}
+						},
+						setCurrentTab(id, active) {
+							this[id] = active
+						},
+					})
+
+					PetiteVue.createApp(store).mount()
+					lottie.loadAnimation({
+						container: document.querySelector("#holy-anim"),
+						path: "https://assets6.lottiefiles.com/packages/lf20_Shqi4jaJ6G.json",
+						renderer: "svg",
+						rendererSettings: {
+							preserveAspectRatio: "none",
+						},
+						loop: true,
+						autoplay: true,
+					})
+					window.removeEventListener("scroll", loadFunctionality)
+				}
+
+				window.addEventListener("scroll", loadFunctionality)
 				window.addEventListener("scroll", handleScroll)
 			})()
 		</script>
