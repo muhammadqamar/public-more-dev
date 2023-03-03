@@ -26,27 +26,31 @@
 				var heroSection = document.querySelector(".section--hero")
 				var pageHeaderHeight = pageHeader.getBoundingClientRect().height
 				var categoriesTop = categories.getBoundingClientRect().top
+				var categoriesHeight = categories.getBoundingClientRect().height
 				var distanceToScroll = categoriesTop - (pageHeaderHeight + 16)
+				var searchForm = document.querySelector(".searchform")
 				var searchResultList = document.querySelector(".searchform__results-list")
 				var pageLink = window.location.href
 
-				document.querySelector("[data-holy]").setAttribute("style", `--header-height: ${pageHeaderHeight}px`)
-
 				function fixIt() {
 					if (categories.classList.contains("categories--fixed")) return
+					console.log(!categories.classList.contains("categories--fixed"), "not fixed")
 					categories.classList.add("categories--fixed")
 					categories.style.top = pageHeader.getBoundingClientRect().height + "px"
-					heroSection.style.marginBottom = categories.getBoundingClientRect().height + "px"
+					heroSection.style.marginBottom =
+						parseInt(getComputedStyle(searchForm).marginBottom) + categoriesHeight
 				}
 
 				function unFixIt() {
 					if (!categories.classList.contains("categories--fixed")) return
+					console.log(categories.classList.contains("categories--fixed"), "fixed")
 					categories.classList.remove("categories--fixed")
 					categories.removeAttribute("style")
 					heroSection.removeAttribute("style")
 				}
 
 				function handleScroll() {
+					// console.log(mediaQuery.matches, window.scrollY >= distanceToScroll, "scrolling")
 					if (!mediaQuery.matches) {
 						unFixIt()
 						return
@@ -194,7 +198,7 @@
 							},
 						],
 						searchValue: "",
-						searchEmpty: `<li class="empty"><p><strong>Εδώ μπορείς να βρεις υπηρεσίες της Public.</strong></p><p>Αν δεν βρήκες αυτό που ψάχνει, χρησιμοποίησε την βασική αναζήτηση της ιστοσελίδας που γράφει	"Ψάχνω για..."</p></li>`,
+						searchEmpty: `<li class="empty"><p><strong>Εδώ μπορείς να βρεις υπηρεσίες των Public.</strong></p><p>Αν δεν βρήκες αυτό που ψάχνεις, χρησιμοποίησε την βασική αναζήτηση της ιστοσελίδας που γράφει	"Ψάχνω για..."</p></li>`,
 						searchPage() {
 							if (this.searchValue === "") return
 							const searchResults = this.searchData.filter((result) =>
@@ -205,10 +209,10 @@
 								searchResultList.innerHTML = ""
 								searchResults.map((result) => {
 									const li = document.createElement("li")
-									const a = document.createElement("a")
-									a.href = `${pageLink}#${result.id}`
+									const a = document.createElement("div")
 									a.onclick = () => {
-										window.location.href = a.href
+										// e.preventDefault()
+										this.scrollTo(result.id, result.type)
 										this.searchValue = ""
 									}
 
@@ -240,6 +244,19 @@
 						setCurrentTab(id, active) {
 							this[id] = active
 						},
+						scrollTo(id, type) {
+							if (!document.querySelector(`#${id}`)) return
+							const distanceTop = type === "service" ? categoriesHeight + 116 + 32 : 116 + 32
+							const top =
+								document.querySelector(`#${id}`).getBoundingClientRect().top +
+								window.scrollY -
+								(pageHeader.getBoundingClientRect().height + mediaQuery.matches ? distanceTop : 16)
+							window.scrollTo({
+								top,
+								left: 0,
+								behavior: "smooth",
+							})
+						},
 					})
 
 					PetiteVue.createApp(store).mount()
@@ -256,7 +273,8 @@
 					window.removeEventListener("scroll", loadFunctionality)
 				}
 
-				window.addEventListener("scroll", loadFunctionality)
+				document.querySelector("[data-holy]").setAttribute("style", `--header-height: ${pageHeaderHeight}px`)
+				window.addEventListener("scroll", loadFunctionality, { once: true })
 				window.addEventListener("scroll", handleScroll)
 			})()
 		</script>

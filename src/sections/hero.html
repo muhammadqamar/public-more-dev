@@ -8,7 +8,7 @@
 		</p>
 	</header>
 	<aside class="search">
-		<form class="searchform">
+		<div class="searchform">
 			<input
 				class="searchform__input"
 				type="search"
@@ -32,60 +32,44 @@
 			<div class="searchform__results" :aria-hidden="searchValue === ''">
 				<ul class="searchform__results-list">
 					<li class="empty">
-						<p><strong>Εδώ μπορείς να βρεις υπηρεσίες της Public.</strong></p>
+						<p><strong>Εδώ μπορείς να βρεις υπηρεσίες των Public.</strong></p>
 						<p>
-							Αν δεν βρήκες αυτό που ψάχνει, χρησιμοποίησε την βασική αναζήτηση της ιστοσελίδας που γράφει
-							"Ψάχνω για..."
+							Αν δεν βρήκες αυτό που ψάχνεις, χρησιμοποίησε την βασική αναζήτηση της ιστοσελίδας που
+							γράφει "Ψάχνω για..."
 						</p>
 					</li>
 				</ul>
 			</div>
-		</form>
+		</div>
 		<ul class="categories">
-			<!-- prettier-ignore -->
-			<include src="components/category.html">
-        {
-          "name": "Πληρωμές",
-          "id": "payments",
-          "image": {
-            "default": "./images/category-payments.jpg",
-            "hover": "./images/category-payments_hover.jpg"
-          }
-        }
-      </include>
-			<!-- prettier-ignore -->
-			<include src="components/category.html">
-        {
-          "name": "Παραδόσεις",
-          "id": "deliveries",
-          "image": {
-            "default": "./images/category-deliveries.jpg",
-            "hover": "./images/category-deliveries_hover.jpg"
-          }
-        }
-      </include>
-			<!-- prettier-ignore -->
-			<include src="components/category.html">
-        {
-          "name": "Προστασία & Express Επισκευή",
-          "id": "support",
-          "image": {
-            "default": "./images/category-support.jpg",
-            "hover": "./images/category-support_hover.jpg"
-          }
-        }
-      </include>
-			<!-- prettier-ignore -->
-			<include src="components/category.html">
-        {
-          "name": "More & More!",
-          "id": "more",
-          "image": {
-            "default": "./images/category-more.jpg",
-            "hover": "./images/category-more_hover.jpg"
-          }
-        }
-      </include>
+			<li class="categories__item category" @click="scrollTo('payments')">
+				<figure class="category__image">
+					<img src="./images/category-payments_hover.jpg" alt="" />
+					<img src="./images/category-payments.jpg" alt="" />
+				</figure>
+				<h3 class="category__title">Πληρωμές</h3>
+			</li>
+			<li class="categories__item category" @click="scrollTo('deliveries')">
+				<figure class="category__image">
+					<img src="./images/category-deliveries_hover.jpg" alt="" />
+					<img src="./images/category-deliveries.jpg" alt="" />
+				</figure>
+				<h3 class="category__title">Παραδόσεις</h3>
+			</li>
+			<li class="categories__item category" @click="scrollTo('support')">
+				<figure class="category__image">
+					<img src="./images/category-support_hover.jpg" alt="" />
+					<img src="./images/category-support.jpg" alt="" />
+				</figure>
+				<h3 class="category__title">Προστασία & Express Επισκευή</h3>
+			</li>
+			<li class="categories__item category" @click="scrollTo('more')">
+				<figure class="category__image">
+					<img src="./images/category-more_hover.jpg" alt="" />
+					<img src="./images/category-more.jpg" alt="" />
+				</figure>
+				<h3 class="category__title">More & More!</h3>
+			</li>
 		</ul>
 	</aside>
 </section>

@@ -12,6 +12,7 @@
 	position: relative;
 	display: grid;
 	grid-template-rows: max-content;
+	cursor: pointer;
 
 	@media (width < 1024px) {
 		height: 5rem;
@@ -25,14 +26,6 @@
 		display: block;
 		height: auto;
 	}
-
-	// @at-root .categories--fixed & {
-	// 	height: 7rem;
-	// 	grid-template-columns: 8rem auto;
-	// 	grid-template-rows: max-content;
-	// 	align-items: stretch;
-	// 	flex: 0 0 auto;
-	// }
 
 	&:hover {
 		box-shadow: 0 0.25em 1rem hsla(0deg 0% 0% / 0.1);
@@ -62,9 +55,13 @@
 	}
 
 	&__title {
+		@extend %bold;
 		display: flex;
 		align-items: center;
 		background-color: v("white");
+		font-size: fluid-rem(1rem, 1.5rem);
+		line-height: 1.125;
+		padding: 0.75em 1em;
 
 		@media (width >= 1024px) {
 			min-height: 7rem;
