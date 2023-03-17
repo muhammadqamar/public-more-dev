@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"description": "",
 	"scripts": {
-		"start": "parcel --no-cache src/index.html --host 192.168.100.28",
+		"start": "parcel --no-cache src/index.html --host 192.168.100.30",
 		"start:dev": "parcel --no-cache src/dev.html",
 		"serve": "http-server -p 1337 dist -c-1",
 		"clean": "rimraf .parcel-cache dist/*",
